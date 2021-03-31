@@ -1,0 +1,474 @@
+﻿a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+/* Font
+-------------------------------------------------- */
+/*import fonts*/
+@font-face {
+    font-family: 'AvenirBold';
+    src: url('../fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'AvenirRegular';
+    src: url('../fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'AntipastoRegular';
+    src: url('../fonts/AntipastoPro-Medium_trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AntipastoLight';
+    src: url('../fonts/AntipastoPro-Light_trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AntipastoBold';
+    src: url('../fonts/AntipastoPro-Bold_trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AntipastoPro-Medium_trial';
+    src: url('../fonts/AntipastoPro-Medium_trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AntipastoPro-DemiBold_trial';
+    src: url('../fonts/AntipastoPro-DemiBold_trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AntipastoPro-Light_trial';
+    src: url('../fonts/AntipastoPro-Light_trial.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'AvenirNext-Medium';
+    src: url('../fonts/AvenirNext-Medium.ttf') format('truetype');
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.fond {
+    width: 100vw;
+    height: 100vh;
+    background: url(../Content/Doc.jpg) no-repeat;
+    background-size: cover;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+.Sac {
+    background: #1381e96e;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: table;
+    margin: 0;
+}
+.imgSA {
+    height: auto;
+    max-width: 300px;
+    margin-top: 10% !important;
+}
+.TextS {
+    font-family: 'AvenirBold';
+}
+    .TextS:hover {
+        font-family: 'AvenirBold';
+    }
+.SacText {
+    font-family: 'AvenirRegular';
+    color: #ffff;
+    text-align: center;
+    font-size: 30px;
+}
+.user {
+    height: 51px !important;
+    width: 300px !important;
+    border-radius: 10px !important;
+    font-family: "AvenirNext-Regular", Helvetica, Arial, serif;
+    font-size: 22.0px !important;
+    color: rgba(140, 140, 140, 1.0) !important;
+    text-align: left !important;
+    line-height: 30.0px !important;
+    border: none !important;
+    resize: none !important;
+    padding: 20px !important;
+    outline: none !important;
+}
+.Sacbtn {
+    height: 51px;
+    width: 300px;
+    font-family: "AvenirNext-Regular", Helvetica, Arial, serif;
+    font-size: 22.0px;
+    text-align: center;
+    line-height: 30.0px;
+    font-weight: bold;
+    color: rgb(64 63 63) !important;
+    background: #fff;
+    vertical-align: middle;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none !important;
+    text-decoration:none!important;
+}
+    .Sacbtn:hover {
+        text-decoration: none!important;
+        outline:none !important;
+
+    }
+
+.NavSact {
+    font-family: "AvenirNext-Regular", Helvetica, Arial, serif;
+    font-size: 22.0px;
+    color: rgba(140, 140, 140, 1.0);
+    text-align: left;
+    line-height: 30.0px;
+    outline: none !important;
+    background: none;
+/*    background: linear-gradient(to bottom, #1b6ec2, #65a1de 80%, #cecef7);*/
+}
+
+.navimg {
+    height: auto;
+    width: 200px;
+}
+
+.Titulo1subin {
+    font-family: 'AvenirBold';
+    font-size: 23px;
+    margin-top: 43px;
+    color: #0366d6;
+    margin-bottom: 43px;
+}
+
+
+.pktt1 {
+    width: 350px;
+    height: 35px;
+    margin-top: 51px;
+    margin-bottom: 51px;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out 0.2s;
+}
+
+    .pktt1:hover {
+        -webkit-transform: scale(1.1);
+    }
+
+.termcond {
+    font-family: 'AvenirRegular';
+    font-size: 14px !important;
+    color: #8C8C8C;
+    border-right: 2px solid rgba(211, 211, 211, 0.00);
+    border-bottom: 2px solid rgba(211, 211, 211, 0.00);
+    padding-right: 2px;
+    padding-bottom: 2px;
+    margin: 10px 0;
+    height: auto;
+}
+
+.btn-entendido {
+    background-color: #65BBC9;
+    color: #fff;
+}
+
+    .btn-entendido:hover {
+        color: #fff;
+        font-weight: bold;
+    }
+
+.custom-select-medio {
+    position: relative;
+    font-size: 14px !important;
+    font-family: 'AvenirBold';
+    color: #ffff;
+    line-height: 20px;
+    top: -10px;
+    padding: 0 6px;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #8C8C8C;
+    border-radius: 0px;
+    background-color: none;
+    background-image: linear-gradient(to bottom, #ffffff 0%,#f7f7f7 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 15px 0;
+    background-size: 23px;
+    border-image: none;
+    width: 568px;
+    max-width: 100%;
+}
+
+    .custom-select-medio select {
+        display: none;
+    }
+
+.Texto1Boldterms {
+    font-family: 'AvenirBold';
+    font-size: 14px;
+    color: #8C8C8C;
+    text-decoration: none;
+    outline: none;
+}
+
+
+.textoObligatorio {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 15px;
+    line-height: 40px;
+    font-family: 'AvenirBold';
+    font-size: 9px;
+    color: #DD001B;
+    transition: 300ms all;
+    margin-top: 30px;
+}
+
+.field label::before {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 15px;
+    line-height: 40px;
+    font-family: 'AvenirBold';
+    font-size: 14px;
+    color: #8c8c8c;
+    transition: 300ms all;
+}
+
+.field input {
+    width: 100%;
+    line-height: 40px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    font-family: 'AvenirRegular';
+    font-size: 14px !important;
+    color: #8c8c8c;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #8C8C8C;
+}
+
+div .select-selected {
+    font-family: 'AvenirBold';
+    color: #8c8c8c;
+    font-size: 14px !important;
+}
+
+
+.custom-select {
+    position: relative;
+    font-size: 14px !important;
+    font-family: 'AvenirBold';
+    color: #ffff;
+    line-height: 20px;
+    top: -10px;
+    padding: 0 6px;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #8C8C8C;
+    border-radius: 0px;
+    background-color: none;
+    background-image: linear-gradient(to bottom, #ffffff 0%,#f7f7f7 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 15px 0;
+    background-size: 23px;
+    border-image: none;
+    width: 568px;
+    max-width: 100%;
+}
+
+    .custom-select select {
+        display: none;
+    }
+
+
+
+.select-selected:after {
+    position: absolute;
+    content: url('../img/flech.png');
+    top: 1px;
+    right: 10px;
+    width: 23px;
+    height: 23px;
+    border: 6px solid transparent;
+    border-color: transparent transparent transparent transparent;
+}
+
+
+.select-selected.select-arrow-active:after {
+    content: url('../img/flech.png');
+    top: 1px;
+}
+
+.select-items div::before {
+    color: #8c8c8c;
+}
+
+.select-items div, .select-selected {
+    color: #ffff;
+    font-family: 'AvenirRegular';
+    padding: 8px 10px;
+    border: 2px solid #f7f7f7;
+    border-color: transparent transparent rgb(255, 255, 255) transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.select-items {
+    font-family: 'AvenirRegular';
+    color: #ffff;
+    font-size: 14px !important;
+    margin-left: 150px;
+    position: absolute;
+    background-color: rgb(3 102 214 / 0.96);
+    border-top: 1px solid #ffff;
+    /*border-top: 1px solid rgba(255, 255, 255, 0.08);*/
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 0px;
+    /*border-bottom: 1px solid #ffff;*/
+    border-radius: 0px 0px 9px 9px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    overflow-y: auto;
+    height: 150px;
+    padding: 0px 5px 5px 10px;
+}
+
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    font-family: 'AvenirBold';
+    color: #ffff;
+    font-size: 14px !important;
+    background-color: #8c8c8c;
+    border: 1px;
+    /*border-radius: 0px 0px 13px 13px;*/
+}
+
+.lastOption {
+    border-radius: 0px 0px 13px 13px;
+    border: none !important;
+}
+
+div .select-selected::selection {
+    text-align: left;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background: #0366d6;
+}
+
+.Ftext {
+    font-size: 14px !important;
+    font-family: 'AvenirBold';
+    color: #ffff;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(27, 112, 182);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+    font-family: 'AvenirRegular' !important;
+}

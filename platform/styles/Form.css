@@ -1,0 +1,318 @@
+﻿.label-before, .field input:valid + label::before, .field input:focus + label::before, .fieldc input:valid + label::before, .fieldc input:focus + label::before {
+	font-family: 'AvenirRegular';
+	color: #8c8c8c;
+	line-height: 20px;
+	font-size: 14px;
+	top: -10px;
+	background: #fff;
+	padding: 0 6px;
+	left: 9px;
+}
+
+.field {
+	position: relative;
+	margin-bottom: 15px;
+}
+
+	.field label::before {
+		content: attr(title);
+		position: absolute;
+		top: 0;
+		left: 15px;
+		line-height: 40px;
+		font-family: 'AvenirBold';
+		font-size: 14px;
+		color: #8c8c8c;
+		transition: 300ms all;
+	}
+
+	.field input {
+		width: 100%;
+		line-height: 40px;
+		padding: 0 15px;
+		box-sizing: border-box;
+		font-family: 'AvenirRegular';
+		font-size: 14px;
+		color: #8c8c8c;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom: 2px solid #8c8c8c;
+	}
+
+		.field input:focus {
+			outline: 0;
+			border-color: #0366d6;
+		}
+
+		.field input:valid + label::before {
+			content: attr(data-title);
+		}
+
+		.field input:focus + label::before {
+			color: #0366d6;
+		}
+
+.Ajusttex {
+	font-family: 'AvenirRegular';
+	font-size: 14px;
+	color: #8c8c8c;
+}
+
+.puesto select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	display: block;
+	font-size: 14px;
+	font-family: 'AvenirRegular';
+	color: #8c8c8c;
+	padding: .4em 1.4em .6em .8em;
+	width: 800px;
+	max-width: 100%;
+	box-sizing: border-box;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid #8c8c8c;
+	background-color: none;
+	background-image: url("img/lista.png"),linear-gradient(to bottom,#fff 0%,#f7f7f7 100%);
+	background-repeat: no-repeat,repeat;
+	background-position: right .7em top 50%,15px 0;
+	background-size: 23px;
+	border-image: none;
+}
+
+	.puesto select:focus {
+		outline: none;
+	}
+
+.fieldc label::before {
+	content: attr(title);
+	position: absolute;
+	top: 0;
+	left: 15px;
+	line-height: 40px;
+	font-family: 'AvenirBold';
+	font-size: 18px !important;
+	color: #8c8c8c;
+	transition: 300ms all;
+}
+
+.fieldc {
+	position: relative;
+	margin-bottom: 15px;
+}
+
+	.fieldc label::before {
+		content: attr(title);
+		position: absolute;
+		top: 0;
+		left: 15px;
+		line-height: 40px;
+		font-family: 'AvenirBold';
+		font-size: 18px;
+		color: #8c8c8c;
+		transition: 300ms all;
+	}
+
+	.fieldc input {
+		width: 100%;
+		line-height: 40px;
+		padding: 0 15px;
+		box-sizing: border-box;
+		font-family: 'AvenirRegular';
+		font-size: 18px;
+		color: #8c8c8c;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom: 2px solid #8c8c8c;
+	}
+
+		.fieldc input:focus {
+			outline: 0;
+			border-color: #0366d6;
+		}
+
+		.fieldc input:valid + label::before {
+			content: attr(data-title);
+		}
+
+		.fieldc input:focus + label::before {
+			color: #0366d6;
+		}
+
+		.fieldc input:valid + label::before {
+			font-family: 'AvenirRegular';
+			color: #8c8c8c;
+			line-height: 20px;
+			font-size: 18px !important;
+			top: -10px;
+			background: #fff;
+			padding: 0 6px;
+			left: 9px;
+		}
+
+
+		.label-before, .field input:valid + label::before, .field input:focus + label::before, .fieldc input:valid + label::before, .fieldc input:focus + label::before {
+			font-family: 'AvenirRegular';
+			color: #8c8c8c;
+			line-height: 20px;
+			font-size: 14px;
+			top: -10px;
+			background: #fff;
+			padding: 0 6px;
+			left: 9px;
+		}
+
+.field {
+	position: relative;
+	margin-bottom: 15px;
+}
+
+	.field label::before {
+		content: attr(title);
+		position: absolute;
+		top: 0;
+		left: 15px;
+		line-height: 40px;
+		font-family: 'AvenirBold';
+		font-size: 14px;
+		color: #8c8c8c;
+		transition: 300ms all;
+	}
+
+	.field input {
+		width: 100%;
+		line-height: 40px;
+		padding: 0 15px;
+		box-sizing: border-box;
+		font-family: 'AvenirRegular';
+		font-size: 14px;
+		color: #8c8c8c;
+		/* border: 1px solid #ccc;
+        border-radius: 3px;*/
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom: 2px solid #8C8C8C;
+	}
+
+		.field input:focus {
+			outline: 0;
+			border-color: #0366d6;
+		}
+
+		.field input:valid + label::before {
+			content: attr(data-title);
+		}
+
+		.field input:focus + label::before {
+			color: #0366d6;
+		}
+
+.Ajusttex {
+	font-family: 'AvenirRegular';
+	font-size: 14px;
+	color: #8c8c8c;
+}
+
+.puesto select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	display: block;
+	font-size: 14px;
+	font-family: 'AvenirRegular';
+	color: #8c8c8c;
+	/*line-height: 16px;*/
+	padding: .4em 1.4em .6em .8em;
+	width: 800px;
+	max-width: 100%;
+	box-sizing: border-box;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid #8C8C8C;
+	background-color: none;
+	background-image: url("img/lista.png"), linear-gradient(to bottom, #ffffff 0%, #f7f7f7 100%);
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 15px 0;
+	background-size: 23px;
+	border-image: none;
+	/*box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px;*/
+}
+
+	.puesto select:focus {
+		outline: none;
+	}
+
+.fieldc label::before {
+	content: attr(title);
+	position: absolute;
+	top: 0;
+	left: 15px;
+	line-height: 40px;
+	font-family: 'AvenirBold';
+	font-size: 18px !important;
+	color: #8c8c8c;
+	transition: 300ms all;
+}
+
+.fieldc {
+	position: relative;
+	margin-bottom: 15px;
+}
+
+	.fieldc label::before {
+		content: attr(title);
+		position: absolute;
+		top: 0;
+		left: 15px;
+		line-height: 40px;
+		font-family: 'AvenirBold';
+		font-size: 18px;
+		color: #8c8c8c;
+		transition: 300ms all;
+	}
+
+	.fieldc input {
+		width: 100%;
+		line-height: 40px;
+		padding: 0 15px;
+		box-sizing: border-box;
+		font-family: 'AvenirRegular';
+		font-size: 18px;
+		color: #8c8c8c;
+		/* border: 1px solid #ccc;
+        border-radius: 3px;*/
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom: 2px solid #8C8C8C;
+	}
+
+		.fieldc input:focus {
+			outline: 0;
+			border-color: #0366d6;
+		}
+
+		.fieldc input:valid + label::before {
+			content: attr(data-title);
+		}
+
+		.fieldc input:focus + label::before {
+			color: #0366d6;
+		}
+
+		.fieldc input:valid + label::before {
+			font-family: 'AvenirRegular';
+			color: #8c8c8c;
+			line-height: 20px;
+			font-size: 18px !important;
+			top: -10px;
+			background: #fff;
+			padding: 0 6px;
+			left: 9px;
+		}
