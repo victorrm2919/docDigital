@@ -4,42 +4,43 @@ require_once '../functions/db_conexion.php';  /* DataBase */
 //     die(header('Location: error.php'));
 // }
 
-$email = $_POST['email'];
+$usuario = $_POST['email'];
 $pass = $_POST['password'];
-$tipo =$_POST['tipo'];
-
 
 if (isset($_POST['tipo'])) {
     try {
          //Seleccionar el usurio en el base de datos
-         $stmt = $conn->prepare("SELECT id, nombres, email, pass FROM doctor WHERE email = ?");
-         $stmt->bind_param("s", $email);
+         if ($_POST['tipo'] == 'doctor') {
+            $stmt = $conn->prepare("SELECT id, nombres, apellidos, email, password FROM doctor WHERE email = ?");
+         }elseif ($_POST['tipo'] == 'paciente') {
+            $stmt = $conn->prepare("SELECT id, nombres, apellidos, email, password FROM paciente WHERE email = ?");
+         }
+         $stmt->bind_param("s", $usuario);
          $stmt->execute();
-         $stmt->bind_result($idDB, $nombresDB, $emailDB, $passDBB); //resultados de la consulta y asigna a variables declaradas
+         $stmt->bind_result($id_usuarioDB, $nombreBD, $apellidoBD, $emailBD, $pass_usuarioDB); //resultados de la consulta y asigna a variables declaradas
          $stmt->fetch();
-         if ($emailDB) {
+         if ($emailBD) {
              //el usuario existe y verificara el password
-             $passVerify = password_verify($pass, $passDBB);
-             if ($passVerify) {
+             if (password_verify($pass, $pass_usuarioDB)) {
                  //iniciar la sesion
                  session_start();
-                 $_SESSION['nombre'] = $nombresDB;
-                 $_SESSION['email'] = $emailDB;
-                 $_SESSION['nivel'] = $tipo;
-                 $_SESSION['id'] = $idDB;
+                 $_SESSION['email'] = $emailBD;
+                 $_SESSION['nombre'] = $nombreBD;
+                 $_SESSION['apellido'] = $apellidoBD;
+                 $_SESSION['id'] = $id_usuarioDB;
                  $_SESSION['login'] = true;
+                 $_SESSION['tipo'] = $_POST['tipo'];
                  //login correcto
                  $respuesta = array(
                      'respuesta' => 'correcto',
-                     'nombre' => $emailDB,
-                     'tipo' => 'login'
+                     'nombre' => $nombreBD . ' ' . $apellidoBD,
+                     'tipo' => $_POST['tipo']
                  );
              } else {
                  //login incorrecto
                  $respuesta = array(
-                     'respuesta' => 'Password incorrecto',  /* 'Validar los datos ingresados' */
-                     'veify' =>$passVerify 
-                );
+                     'respuesta' => 'Password incorrecto'
+                 );
              }
              
          } else {

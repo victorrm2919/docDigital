@@ -1,6 +1,7 @@
 <?php 
+session_start();
 include 'functions/functions.php';
-include 'templates/header.php'; 
+include 'templates/login/header.php'; 
 ?>
 
 <div class="col-sm-7 form-section animate animationfadeIn">
@@ -8,34 +9,34 @@ include 'templates/header.php';
   <div class="login-wrapper">
     <h2 class="login-title">Crea una cuenta</h2>
 
-    <form class="col-12 col-sm-11 col-lg-10" name="crear-registro" id="guardar-registro" method="post" action="models/model-create.php">
+    <form class="col-12 col-sm-11 col-lg-10 form-create" name="crear-registro" id="guardar-registro" method="post" action="models/model-create.php">
 
       <div class="form-group d-xl-flex justify-content-between">
         <div class="form-floating text-muted col-xl-6 col-12 w49">
-          <input type="text" class="form-control" id="floatingInput" name="name" placeholder="Juan Perez">
-          <label for="floatingInput" title="Nombre(s)" data-title="Nombre(s)">Nombre(s)</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Juan Perez" require autocomplete="off">
+          <label for="nombre">Nombre(s)</label>
         </div>
 
         <div class="form-floating text-muted col-xl-6 col-12 w49">
-          <input type="text" class="form-control" id="floatingInput" name="last" placeholder="Juan Perez">
-          <label for="floatingInput" title="Apellidos" data-title="Apellidos">Apellidos</label>
+          <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Juan Perez" require autocomplete="off">
+          <label for="apellido">Apellidos</label>
         </div>
       </div>
 
       <div class="form-floating mb-3 text-muted">
-        <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
-        <label for="floatingInput" title="Email" data-title="Email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" require autocomplete="off">
+        <label for="email">Email</label>
       </div>
 
       <div class="form-floating text-muted pass">
-        <input type="password" class="form-control password" id="floatingPassword" name="pass" placeholder="Password">
-        <label for="floatingPassword">Password</label>
+        <input type="password" class="form-control password" id="password" name="password" placeholder="Password" require autocomplete="off">
+        <label for="password">Password</label>
         <i class="fas fa-eye password-view show-password"></i>
       </div>
 
       <div class="form-floating text-muted pass">
-        <input type="password" class="form-control rpassword" id="floatingPassword" placeholder="Repite tu Password">
-        <label for="floatingPassword">Repite tu Password</label>
+        <input type="password" class="form-control rpassword" id="Cpassword" name="Cpassword"  placeholder="Repite tu Password" require autocomplete="off">
+        <label for="Cpassword">Repite tu Password</label>
       </div>
 
       <div class="">
@@ -50,4 +51,4 @@ include 'templates/header.php';
 </div>
 
 
-<?php include 'templates/footer.php'; ?>
+<?php include 'templates/login/footer.php'; ?>

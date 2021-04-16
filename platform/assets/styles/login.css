@@ -1,0 +1,285 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Karla', sans-serif;
+  overflow: none;
+}
+
+@media (min-width: 1200px) {
+  .w49 {
+    width: 49% !important;
+  }
+}
+
+.intro-section {
+  content: '';
+  background-image: url(../img/intro-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 75px 95px;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  color: #ffffff;
+  position: relative;
+}
+
+.intro-section:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #00284eb9;
+}
+
+.intro-content-wrapper,
+.brand-wrapper,
+.intro-section-footer {
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .intro-section {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .intro-section {
+    padding: 28px 28px 12px 28px;
+  }
+}
+
+@media (max-width: 575px) {
+  .intro-section {
+    min-height: auto;
+  }
+}
+
+.brand-wrapper .logo {
+  height: 50px;
+}
+
+@media (max-width: 767px) {
+  .brand-wrapper {
+    margin-bottom: 35px;
+  }
+}
+
+.infoResp {
+  cursor: pointer;
+}
+
+.infoResp i {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+  .propositos {
+    display: none;
+  }
+}
+
+.intro-content-wrapper {
+  width: 90%;
+  max-width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.intro-content-wrapper .intro-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.intro-content-wrapper .intro-text {
+  font-size: 14px;
+  line-height: 1.29;
+  color: #ffffff;
+}
+
+.intro-content-wrapper .btn-read-more {
+  background-color: #fff;
+  padding: 13px 20px;
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+}
+
+.intro-content-wrapper .btn-read-more:hover {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.obj {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #f39c12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: .6rem;
+}
+
+.icon i {
+  font-size: 12px;
+}
+
+.obj p {
+  display: block;
+  margin: auto 0;
+}
+
+@media (max-width: 767px) {
+  .intro-section-footer {
+    margin-top: 35px;
+  }
+}
+
+.intro-section-footer p {
+  font-size: 14px;
+  color: #f6f6f6;
+  margin-bottom: 0;
+}
+
+.form-section {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  .form-section {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 575px) {
+  .form-section {
+    padding: 26px;
+  }
+}
+
+.login-wrapper {
+  width: 50%;
+  max-width: 100%;
+  margin: auto 0;
+}
+
+@media (max-width: 1024px) {
+  .login-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  .login-wrapper {
+    width: 95%;
+    margin: auto;
+  }
+}
+
+.login-wrapper .form-control {
+  min-height: 55px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 15px;
+  background-color: #f4f4f4;
+  padding: 19px 25px 18px;
+  margin-bottom: 18px;
+}
+
+.login-title {
+  font-size: 29px;
+  color: #0d2366;
+  margin-bottom: 18px;
+}
+
+.form-floating label {
+  transition: 400ms all !important;
+}
+
+.pass {
+  position: relative;
+}
+
+.password-view {
+  position: absolute;
+  top: 40%;
+  right: 0%;
+  margin-right: 20px;
+  font-size: 15px;
+  color: #919aa3;
+  cursor: pointer;
+}
+
+.login-btn {
+  padding: 12px 30px;
+  border-radius: 4px;
+  background-color: #0984e3;  /* 2a4972 */
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 1;
+}
+
+.login-btn:hover {
+  border: 1px solid #0984e3;
+  background-color: transparent;
+  color: #0984e3;
+}
+
+.forgot-password-link {
+  font-size: 12px;
+  color: #919aa3;
+}
+
+.login-wrapper-signup-text {
+  font-size: 18px;
+  color: #000;
+  padding-top: 40px;
+  width: 410px;
+  max-width: 100%;
+}
+
+@media (max-width: 575px) {
+  .login-wrapper-signup-text {
+    -webkit-box-ordinal-group: 2;
+    order: 1;
+  }
+}
+
+.login-wrapper-signup-text a {
+  color: #240aad;
+}

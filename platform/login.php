@@ -1,6 +1,7 @@
 <?php 
+session_start();
 include 'functions/functions.php';
-include 'templates/header.php'; 
+include 'templates/login/header.php'; 
 ?>
 
   <div class="col-sm-7 form-section animate animationfadeIn">
@@ -43,4 +44,4 @@ include 'templates/header.php';
   </div>
 
 
-<?php include 'templates/footer.php'; ?>
+<?php include 'templates/login/footer.php'; ?>

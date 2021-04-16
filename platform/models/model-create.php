@@ -6,35 +6,45 @@ require_once '../functions/db_conexion.php';  /* DataBase */
 // }
 
 if ($_POST['registro'] == 'nuevo') {
-    $nombres = $_POST['name'];
-    $apellido = $_POST['last'];
     $email = $_POST['email'];
-    $pass = $_POST{'password'};
-    $tipo = $_POST{'tipo'};
+    $nombre = $_POST['nombre'];
+    $apellido =$_POST['apellido'];
+    $pass = $_POST['password'];
+    $tipo = $_POST['tipo'];
+    
 
-    $opciones = [
-        'costo' => 12,
-    ];
+    $opciones = array('costo' => 12);
     $password = password_hash($pass, PASSWORD_BCRYPT, $opciones);
 
     try {
+
         if ($tipo == 'doctor') {
-            $stmt = $conn->prepare("INSERT INTO doctor (nombres, apellidos, email, pass) VALUES (?, ?, ?, ?)");
+            $stmt = $conn->prepare("INSERT INTO doctor (nombres, apellidos, email, password) VALUES (?, ?, ?, ?)");
         }elseif ($tipo == 'paciente') {
-            $stmt = $conn->prepare("INSERT INTO paciente (nombres, apellidos, email, pass) VALUES (?, ?, ?, ?)");
+            $stmt = $conn->prepare("INSERT INTO paciente (nombres, apellidos, email, password) VALUES (?, ?, ?, ?)");
         }
-        $stmt->bind_param("ssss", $nombres, $apellido, $email, $password);
+
+        $stmt->bind_param("ssss", $nombre, $apellido, $email, $password);
         $stmt->execute();
         if($stmt->affected_rows > 0 ){
+            session_start();
+            $_SESSION['email'] = $email;
+            $_SESSION['nombre'] = $nombre;
+            $_SESSION['apellido'] = $apellido;
+            $_SESSION['id'] = $stmt->insert_id;
+            $_SESSION['tipo'] = $tipo;
+            $_SESSION['login'] = true;
+
+
             $respuesta = array(
                 'respuesta' => 'correcto',
-                'tipo' => $tipo,
+                'tipo' => 'Doctor',
                 'registro' => 'Nuevo'
             );
         }else {
             $respuesta = array(
                 'respuesta' => 'Error',
-                'tipo' => tipo,
+                'tipo' => 'Doctor',
                 'registro' => 'Nuevo',
                 'info' =>$stmt->error
             );
@@ -44,7 +54,6 @@ if ($_POST['registro'] == 'nuevo') {
     } catch (Exception $e) {
         echo "Error.." . $e->getMessage();
     }
-
 
     die(json_encode($respuesta));
 }

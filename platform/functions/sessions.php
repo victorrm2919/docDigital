@@ -10,7 +10,7 @@ function usuario_autenticado() {
 
 function revisar_usuario() {
     //valida que halla una sesion iniciada
-    return isset($_SESSION['nombre']);  //valida que exista un nombre en session
+    return isset($_SESSION['email']);  //valida que exista un email en session
 }
 
 session_start();  //arranca la sesion, sin necesidad de estar logenado en cualquier pagina
