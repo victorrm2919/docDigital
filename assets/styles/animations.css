@@ -10,6 +10,9 @@
   animation-fill-mode: both;
 }
 
+
+/* animate y clase de animacion */
+
 @keyframes fadeIn {
   0% {
     opacity: 0
@@ -237,6 +240,12 @@
   -webkit-animation-name: fadeOutRight;
   animation-name: fadeOutRight
 }
+
+
+
+
+/* Sin necesidad animate */
+
 
 
 .slideDown{
