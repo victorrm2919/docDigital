@@ -57,3 +57,30 @@ if ($_POST['registro'] == 'nuevo') {
 
     die(json_encode($respuesta));
 }
+
+
+
+/* Validacion de correo al ingresar */
+if ($_POST['registro'] == 'validar-correo') {
+    $email = $_POST['correoV'];
+    $tipo = $_POST['tipo'];
+
+    try {
+        $sql = "SELECT id FROM `$tipo` WHERE email = '$email'";
+        $resultado = $conn->query($sql);
+    } catch (Exception $e) {
+        echo "Error.." . $e->getMessage();
+    }
+
+    if ($resultado->fetch_assoc() == null) {
+        $respuesta = array(
+            'respuesta' => 'Ok',
+        );
+    }else {
+        $respuesta = array(
+            'respuesta' => 'existe',
+        );
+    }
+    
+    die(json_encode($respuesta));
+}

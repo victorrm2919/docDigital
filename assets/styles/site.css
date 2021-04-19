@@ -45,6 +45,10 @@
     src: url('../fonts/AvenirNext-Medium.ttf') format('truetype');
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
@@ -126,7 +130,6 @@
 .roudedNav {
     border-radius: 40px;
 }
-
 /* Plataformas */
 
 .card {
@@ -196,13 +199,33 @@
     float: left;
 }
 
+.Imgnewsm {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
+
 .timestamp {
     margin-bottom: 20px;
     color: #0366d6;
+    padding: 10px;
 }
 
 .newdes {
     margin: 10px;
+    text-align: justify;
+    hyphens: auto;
+    line-height: 25px;
+    padding: 10px;
+    padding-right: 10px;
+}
+
+.textajust {
+    text-align: justify;
+    hyphens: auto;
+    line-height: 25px;
+    padding: 10px;
 }
 
 .listitem {
@@ -225,6 +248,7 @@
 .card-title {
     font-weight: bold;
     margin-top: 20px;
+    padding: 10px;
 }
 
 .FSINP {
@@ -256,7 +280,6 @@
     text-decoration: none;
     color: #cdd8e0;
 }
-
 /* Contacto */
 
 #contact-form .input-group input:focus{

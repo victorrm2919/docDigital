@@ -51,15 +51,12 @@ if($pagina !== 'login' && $pagina !== 'create-account') {
   <main class="mainCont animate animationfadeIn">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-5 intro-section content">
+        <div class="col-sm-5 intro-section content intro-<?php echo $tipo ?>">
           <div class="brand-wrapper">
             <a href="../"><img src="assets/img/logo-invertido.png" alt="" class="logo"></a>
           </div>
           <div class="intro-content-wrapper">
             <h1 class="intro-title">Bienvenido a DocDigital</h1>
-            <div class="infoResp col-12 d-sm-none text-center">
-              <i class="fas fa-chevron-down"></i>
-            </div>
             <?php if($tipo == 'paciente'): ?>
             <p class="intro-text propositos d-sm-block">
             Si queremos que la salud para todos sea una realidad, necesitamos: personas y comunidades que tengan acceso a servicios de salud de alta calidad para que puedan cuidar de su propia salud y de la salud de sus familiares; profesionales sanitarios cualificados que proporcionen una atención de calidad centrada en las personas; y responsables de la formulación de políticas comprometidos a invertir en la atención primaria de la salud. (ONU, 2019)
@@ -88,6 +85,10 @@ if($pagina !== 'login' && $pagina !== 'create-account') {
               </div>
             </div>
             <?php endif ?>
+
+            <div class="infoResp col-12 d-sm-none text-center">
+              <i class="fas fa-chevron-down"></i>
+            </div>
 
           </div>
           <div class="intro-section-footer d-none d-sm-block">

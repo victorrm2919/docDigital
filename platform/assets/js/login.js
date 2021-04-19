@@ -1,4 +1,20 @@
 $(function () {
+
+  let userGet = location.href
+  let infoGet = userGet.substr(userGet.indexOf('=')+1,8)
+
+  /* activar nav */
+  if (infoGet === 'paciente') {
+    $('.nav-paciente').addClass('active alert-link');
+    $('.nav-doctor').removeClass('active alert-link');
+    $('.nav-doctor').addClass('text-muted');
+  } else if (infoGet ==='doctor') {
+    $('.nav-paciente').removeClass('active alert-link');
+    $('.nav-paciente').addClass('text-muted');
+    $('.nav-doctor').addClass('active alert-link');
+  }
+
+
   /* Responsive */
 
   $('.infoResp i').click(function (e) {
@@ -124,8 +140,6 @@ $(function () {
                     timerProgressBar: true,
                     willClose: () => {
                       window.location.href = '../dashboard';
-                      // $('.login-box').removeClass('animate__zoomIn');
-                      // $('.login-box').addClass('animate__zoomOut');
                     }
                   })
                 } else {
@@ -220,6 +234,54 @@ $(function () {
 
   }
 
+  /* Valida correo al crear cuenta */
 
+
+  $('.validarCorreo').focusout(function (e) {
+    e.preventDefault();
+    if ($(this).val() != '') {
+      let padreForm = $(this).parents('form').attr('action')
+      let correo =  this.value  
+      let tipo = $('#tipo').val();
+      let info = {
+        'correoV' : correo,
+        'registro' : 'validar-correo',
+        'tipo' : tipo
+      };
+
+      $.ajax({
+        type: "post",
+        url: padreForm,
+        data: info,
+        dataType: "json",
+        success: function (response) {
+          if (response.respuesta == 'Ok') {
+            $('#registro').val('nuevo');
+          }else {
+            $('.existeCorreo').removeClass('d-none');
+            $('#crear-cuenta').addClass('disabled');
+            $('.existeCorreo').attr('data-error', correo);
+            $('.validarCorreo').focus();
+
+          }
+        }
+      });
+    
+    }
+  }).keyup(function (e) {
+    let dataErr = $('.existeCorreo').attr('data-error');
+    if ($(this).val() != dataErr ) {
+    $('.existeCorreo').addClass('d-none');
+    $('.existeCorreo').attr('data-error', '');
+    $('#crear-cuenta').removeClass('disabled');
+    }
+  });
+
+
+  /* promotion */
+  $('button[data-bs-dismiss=promotion]').click(function (e) { 
+    e.preventDefault();
+    $('.promotion').fadeOut();
+  });
 
 });

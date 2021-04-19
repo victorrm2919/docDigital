@@ -1,11 +1,3 @@
-<?php 
-include 'functions.php';
-
-$pagina = obtenerPaginaActual();
-// if($pagina !== 'login' && $pagina !== 'create-account') {
-//   include 'functions/sessions.php';
-// }
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,13 +23,11 @@ $pagina = obtenerPaginaActual();
 
   <!-- custom -->
   <link rel="stylesheet" href="assets/styles/site.css" />
-  <!-- <link rel="stylesheet" href="assets/styles/R.css" /> -->
-  <link rel="stylesheet" href="assets/styles/Form.css" />
-  <link rel="stylesheet" href="assets/styles/animations.css">
+
 </head>
 
 <body class="animate animationfadeIn">
-  <!-- Container Nav -->
+  <!-- Nav -->
   <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
       <div class="col-12">
@@ -84,50 +74,45 @@ $pagina = obtenerPaginaActual();
                 </li>
                 <li class="nav-item mx-2">
                   <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center navHover"
-                    id="quienNav" data-bs-toggle="dropdown" aria-expanded="false">
+                    id="quienNav" href="https://sactiva.com/Nosotros.html#gsc.tab=0" target="_blank" >
                     ¿Quién es Sactiva?
                   </a>
                 </li>
-
-                <li class="nav-item ms-lg-auto dropdown dropdown-hover">
-                  <a href="" class="btn btn-sm  bg-gradient-info  btn-round mb-0 me-1 mt-2 mt-md-0" id="selecIniS"
-                    data-bs-toggle="dropdown" aria-expanded="false">Iniciar Sesión</a>
-
-                  <ul class="dropdown-menu dropdown-menu-animation mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="selecIniS">
-                    <div class="d-none d-lg-block">
-                      <li class="nav-item ">
-                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="platform/login.php?user=doctor">
-                          <div class="d-flex">
-                            <div class="icon h-10 me-3 mt-1"><i class="fas fa-user-md"></i></div>
-                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Doctor</h6>
-                          </div>
-                        </a>
-                      </li>
-
-                      <li class="nav-item ">
-                        <a class="dropdown-item py-2 ps-3 border-radius-md" href="platform/login.php?user=paciente">
-                          <div class="d-flex">
-                            <div class="icon h-10 me-3 mt-1"><i class="fas fa-user"></i></div>
-                            <h6 h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Paciente</h6>
-                          </div>
-                        </a>
-                      </li>
-                    </div>
-                  </ul>
-
-                </li>
-
               </ul>
+
+              <div class="col-lg-2 ms-lg-auto d-flex justify-content-center mt-3 mt-lg-0">
+                <div class="dropdown">
+                  <a class="btn bg-gradient-info dropdown-toggle btn-round m-0" type="button" id="iniciarS"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Iniciar Sesión
+                  </a>
+                  <ul class="dropdown-menu px-2 py-3" aria-labelledby="iniciarS">
+                    <li><a class="dropdown-item border-radius-md" href="platform/login.php?user=doctor">
+                        <div class="d-flex">
+                          <div class="icon h-10 me-3 mt-1"><i class="fas fa-user-md"></i></div>
+                          <h6
+                            class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                            Doctor</h6>
+                        </div>
+                      </a></li>
+                    <li><a class="dropdown-item border-radius-md" href="platform/login.php?user=paciente">
+                        <div class="d-flex">
+                          <div class="icon h-10 me-3 mt-1"><i class="fas fa-user"></i></div>
+                          <h6
+                            class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                            Paciente</h6>
+                        </div>
+                      </a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-
-
-          </div>
         </nav>
         <!-- End Navbar -->
       </div>
     </div>
   </div>
-  <!-- End Container Nav -->
+  <!-- Nav -->
 
   <!-- Header -->
   <header class="bg-gradient-dark" id="home">
@@ -294,34 +279,34 @@ $pagina = obtenerPaginaActual();
       <div class="row">
         <div class="card shadow-light-lg overflow-hidden text-center text-lg-left">
           <div class="container">
-            <div class="row align-items-center">
-              <div class="col-md-4 py-5">
-                <!-- Image -->
-                <img src="platform/assets/img/SactivaDocDig3.jpg" class="mx-auto d-block img-fluid" alt="...">
-              </div>
-
-              <div class="col-md-8 py-5">
-                <!-- Body -->
-                <div class="card-body">
-                  <!-- Heading -->
-                  <h3 class="textBold mb-3">
-                    DocDigital
-                  </h3>
-                  <!-- Text -->
-                  <p class="lead mb-0">
-                    Es un servicio de interacción digital que te permite hablar con un doctor, disminuye
-                    ausencias de
-                    trabajo
-                    o faltas
-                    a la escuela por consultas médicas o esperas largas en el hospital. Recibe tu
-                    diagnóstico y
-                    tratamiento, además
-                    de seguimiento en tiempo real, tú y tu familia estarán siempre protegidos.
-                  </p>
-
+            <div class="row align-items-center py-5">
+                <div class="col-md-4">
+                  <!-- Image -->
+                  <img src="platform/assets/img/SactivaDocDig3.jpg" class="mx-auto d-block img-fluid" alt="...">
                 </div>
 
-              </div>
+                <div class="col-md-8">
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Heading -->
+                    <h3 class="textBold mb-3">
+                      DocDigital
+                    </h3>
+                    <!-- Text -->
+                    <p class="lead mb-0">
+                      Es un servicio de interacción digital que te permite hablar con un doctor, disminuye
+                      ausencias de
+                      trabajo
+                      o faltas
+                      a la escuela por consultas médicas o esperas largas en el hospital. Recibe tu
+                      diagnóstico y
+                      tratamiento, además
+                      de seguimiento en tiempo real, tú y tu familia estarán siempre protegidos.
+                    </p>
+
+                  </div>
+
+                </div>
             </div> <!-- / .row -->
           </div>
         </div>
@@ -358,7 +343,8 @@ $pagina = obtenerPaginaActual();
                   if ($i < 16) { 
                   echo 
                   '<div class="listitem" role="option">
-                  <img src="platform/assets/img/sacomsnews.png" class="Imgnews" alt="">
+                  <img src="platform/assets/img/sacomsnews.png" class="Imgnews d-none d-sm-none d-md-block" alt="">
+                  <div class="d-block d-sm-block d-md-none"> <img src="platform/assets/img/sacomsnews.png" class="Imgnewsm mx-auto d-block" alt=""></div>
                   <h5 class="card-title">'.$title.'</h5>
                   <span class="timestamp">'.$date.'</span>
                   </br>
@@ -422,10 +408,11 @@ $pagina = obtenerPaginaActual();
     </div>
   </section>
 
+  <!-- Contacto -->
   <section class="my-5" id="contacto">
     <div class="container">
       <div class="d-flex justify-content-center flex-column">
-        <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
+        <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-2">
           <div class="text-center">
             <h3 class="text-gradient text-danger">Contactanos</h3>
             <p class="mb-0">
@@ -533,12 +520,11 @@ $pagina = obtenerPaginaActual();
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
     integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
     crossorigin="anonymous"></script>
-  <!-- scrollTo -->
-  <script src="assets/js/plugins/scrollIt.min.js"></script>
   <!-- Modernizr -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
     integrity="sha512-3n19xznO0ubPpSwYCRRBgHh63DrV+bdZfHK52b1esvId4GsfwStQNPJFjeQos2h3JwCmZl0/LgLxSKMAI55hgw=="
     crossorigin="anonymous"></script>
+    <!-- Bootstrsp js -->
   <script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
   <!-- custom js -->
   <script src="assets/js/site.js"></script>

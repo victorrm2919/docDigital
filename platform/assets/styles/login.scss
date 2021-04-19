@@ -17,7 +17,6 @@ body {
   }
 
 .intro-section {
-    background-image: url(../images/intro-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -39,6 +38,13 @@ body {
     @media (max-width: 575px) {
         min-height: auto;
     }
+}
+
+.intro-doctor {
+    background-image: url(../images/intro-bg.jpg);
+}
+.intro-paciente {
+    background-image: url(../images/intro-bg-2.jpg);
 }
 
 .intro-section:before {

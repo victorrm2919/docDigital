@@ -228,6 +228,27 @@ window.addEventListener("load", function () {
     }
   });
 
+  /* ajax img */
+
+  $('#dig').click(function (e) { 
+    e.preventDefault();
+    let img = new FormData(document.querySelector('#infoUsuario'));
+
+    $.ajax({
+      type: 'post',
+      url: 'functions/eliminar_fondo.php',
+      data: img,
+      dataType: "json",
+      contentType: false,
+      processData: false,
+      async: true,
+      cache: false,
+      success: function (response) {
+        console.log(response);
+      }
+    });
+  });
+
 
 });
 

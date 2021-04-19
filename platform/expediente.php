@@ -9,10 +9,6 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido']
 ?>
 
 
-<!-- <pre>
-  <? var_dump($_SESSION) ?>
-</pre> -->
-
 
 <main role="main" class="pb-3 container-md">
   <!-- Cuerpo Formulario -->
@@ -44,8 +40,6 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido']
               }elseif($_SESSION['tipo']== 'paciente') {
                 include 'templates/exp/paciente.php';
               }
-              
-              
               ?>
 
 
@@ -56,6 +50,8 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido']
                   data-active="infoPaciente">Siguiente</button>
               </div>
             </div>
+
+            
           </form>
 
         </div>

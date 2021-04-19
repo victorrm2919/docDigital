@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="assets/styles/select2-bootstrap4.min.css" />
 
   <!--Section style-->
-  <link rel="stylesheet" href="../styles/animations.css" />
+  <link rel="stylesheet" href="../assets/styles/animations.css" />
   <link rel="stylesheet" href="assets/styles/exp.css" />
   <link rel="stylesheet" href="assets/styles/card.css" /> <!-- card -->
 

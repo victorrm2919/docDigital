@@ -20,9 +20,154 @@ body {
   }
 }
 
+.promotion {
+  color: #fff;
+  background-image: linear-gradient(310deg, #7928CA 0%, #FF0080 100%);
+}
+
+@media (min-width: 1200px) {
+  .promotion {
+    position: absolute;
+    top: -30px;
+    right: 5%;
+    width: 15%;
+    height: 160px;
+    padding: .5rem 1.5rem;
+    border-radius: 0 0 25px 25px;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .promotion {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+
+.conte {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+.promotion .contBody .row  h4 {
+  font-size: 1.2rem;
+  line-height: 1;
+  margin: .5rem 0;
+}
+
+@media (min-width: 768px) {
+  .promotion .contBody .row  h4 {
+    font-size: 1rem;
+  }
+}
+
+
+.contBody {
+  margin: 0.5rem 1.5rem;
+}
+
+@media (min-width: 1200px) {
+  .contBody {
+    margin: 0;
+  }
+}
+
+.promotion .conte p {
+  font-size: 11px;
+  line-height: 1;
+  margin: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .promotion .conte p {
+    font-size: 11px;
+    line-height: 1;
+    margin: 0;
+  }
+}
+
+
+
+
+.alert-danger{
+color: #fff;
+background-color: #dc3545;
+border-color: #d32535;
+}
+
+.alert-dismissible {
+  padding-right: 4rem;
+}
+.alert {
+  position: relative;
+  padding: .75rem 1.25rem;
+      padding-right: 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+  border-radius: .25rem;
+}
+
+.alert .close, .alert .mailbox-attachment-close {
+  color: #000;
+  opacity: .2;
+}
+.alert-dismissible .close, .alert-dismissible .mailbox-attachment-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: .75rem 1.25rem;
+  color: inherit;
+}
+
+button.close, button.mailbox-attachment-close {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.close, .mailbox-attachment-close {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
+
+.alert .icon {
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+.h5, h5 {
+  font-size: 1.25rem;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+
+
+
+
+
+
 .intro-section {
   content: '';
-  background-image: url(../img/intro-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -36,6 +181,15 @@ body {
   color: #ffffff;
   position: relative;
 }
+
+.intro-doctor {
+  background-image: url(../img/intro-bg.jpg);
+}
+
+.intro-paciente {
+  background-image: url(../img/intro-bg-2.jpg);
+}
+
 
 .intro-section:before {
   content: '';
@@ -225,6 +379,19 @@ body {
   color: #0d2366;
   margin-bottom: 18px;
 }
+
+
+.iconB {
+  text-align: center;
+  font-size: 10rem;
+}
+
+.sinLink {
+  text-decoration: none;
+}
+
+
+
 
 .form-floating label {
   transition: 400ms all !important;

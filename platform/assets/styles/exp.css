@@ -253,6 +253,7 @@ legend {
 
 .formEspecialidad{
     position: absolute;
+    z-index: 999;
 }
 
 
@@ -285,7 +286,6 @@ legend {
     opacity: 1;
     transform: translateY(10%);
 }
-
 
 
 /* Footer */

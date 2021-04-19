@@ -199,10 +199,27 @@
 
     <div class="row mt-3">
       <div class="card">
-        <label for="formFile" class="form-label m-3">Firma</label>
-        <div class="input-group card-body">
-          <a class="input-group-text" id="Foto" class="btn btn-secondary"><i class="fas fa-camera"></i></a>
-          <input class="form-control" type="file" id="formFile">
+        <div class="imgUpload d-flex">
+          <div class="form-img col-md-6">
+            <label for="formFile" class="form-label m-3">Firma</label>
+            <div class="input-group card-body">
+              <a class="input-group-text" id="Foto" class="btn btn-secondary"><i class="fas fa-camera"></i></a>
+              <input class="form-control" type="file" id="formFile" name="imgFirma">
+            </div>
+          </div>
+
+          <div class="imgView col-md-6">
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="row justify-content-between align-items-center">
+            <div class="col-8">
+              <p class="form-text m-0 p-0">Por favor presiona digitalizar para convertir tu firma al formato requerido
+              </p>
+            </div>
+            <button type="button" class="btn btn-primary col-2 d-block" id="dig">Digitalizar</button>
+          </div>
         </div>
       </div>
     </div>
