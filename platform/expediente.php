@@ -25,9 +25,6 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido']
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="datosPago-tab" type="button">Información de Pago</button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="confirmacion-tab" type="button">Confirmación</button>
-            </li>
           </ul>
           <!-- Fin llenado -->
 
@@ -42,22 +39,27 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido']
               }
               ?>
 
-
-            <div class="row">
-              <div class="col-12 mt-4 mb-3 text-end">
-                <input type="hidden" name="tipo" value="<?php echo $_SESSION['tipo']?>">
-                <button class="btn btn-primary" id="sig1" data-page="datosPago"
-                  data-active="infoPaciente">Siguiente</button>
-              </div>
-            </div>
-
-            
           </form>
 
+          <div class="row">
+            <input type="hidden" name="tipo" value="<?php echo $_SESSION['tipo']?>" form="formInfo">
+
+            <div class="col-6 mt-4 mb-3 text-start d-none divA">
+              <button class="btn btn-primary" id="ant1" data-page="infoPaciente"
+                data-active="datosPago">Anterior</button>
+            </div>
+
+            <div class="col-12 mt-4 mb-3 text-end divS">
+              <button class="btn btn-primary" id="sig1" data-page="datosPago" data-active="infoPaciente"
+                form="formInfo">Siguiente</button>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
+
 </main>
 
 

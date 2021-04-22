@@ -169,28 +169,6 @@ html{
     }
   }
   
-  .col2{
-    input{
-      font-size: 15px;
-      transition: background 0.5s;
-      &:focus{
-        outline-width: 0;
-        background: rgba(31,134,252, 0.15);
-        transition: background 0.5s;
-      }
-    }
-    
-    label{
-      padding-left: 8px;
-      font-size: 15px;
-      color: #444;
-    }
-    
-    .ccv{
-      width: 30%;
-    }
-  }
-  
 }
 
 .chip{
@@ -211,4 +189,9 @@ html{
     margin: auto;
     background: #ddd;
   }
+}
+
+
+.checkAyT label {
+  font-size: 12px;
 }

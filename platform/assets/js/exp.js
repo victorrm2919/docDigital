@@ -143,31 +143,60 @@ window.addEventListener("load", function () {
 
 
   /* Listeners Buttons */
+$('#sig1').click(function (e) {
+  e.preventDefault();
+  let a = $(this).attr('data-active');
+  let b = $(this).attr('data-page');
 
-  $('#sig1').click(function (e) {
-    e.preventDefault();
-    let a = $(this).attr('data-active');
-    let b = $(this).attr('data-page');
+  let acti = '#' + a;
+  let nextAct = '#' + b;
 
-    let acti = '#' + a;
-    let nextAct = '#' + b;
+  let activeTab = `${acti}-tab`
+  let nextActTab = `${nextAct}-tab`
 
-    let activeTab = `${acti}-tab`
-    let nextActTab = `${nextAct}-tab`
+  if (b == '') {
+    document.formInfo.submit();
+  } else {
 
     $(activeTab).removeClass('active');
     $(acti).removeClass('active show');
-
     $(nextActTab).addClass('active');
     $(nextAct).addClass('active show');
+    $(this).attr('data-active', b);
+    $(this).attr('data-page', '');
+    $(this).html('Finalizar');
+    $('.divA').removeClass('d-none')
+    $('.divS').removeClass('col-12');
+    $('.divS').addClass('col-6');
+  }
+});
 
-    if (a == 'confirmacion') {
-      document.formInfo.submit();
-    } else {
-      $(this).attr('data-active', b);
-      $(this).attr('data-page', 'confirmacion');
-    }
-  });
+$('#ant1').click(function (e) {
+  e.preventDefault();
+  let a = $(this).attr('data-active');
+  let b = $(this).attr('data-page');
+
+  let acti = '#' + a;
+  let nextAct = '#' + b;
+
+  let activeTab = `${acti}-tab`
+  let nextActTab = `${nextAct}-tab`
+
+  if (b != '') {
+    $(activeTab).removeClass('active');
+    $(acti).removeClass('active show');
+    $(nextActTab).addClass('active');
+    $(nextAct).addClass('active show');
+    $('#sig1').attr('data-active', 'infoPaciente');
+    $('#sig1').attr('data-page', a);
+    $('.divA').addClass('d-none')
+    $('#sig1').html('Siguiente');
+    $('.divS').removeClass('col-6');
+    $('.divS').addClass('col-12');
+  }
+});
+
+
 
 
   /* especialidad */
@@ -226,27 +255,6 @@ window.addEventListener("load", function () {
       let rfc = curp.substring(0,10)
       $(this).val(rfc);
     }
-  });
-
-  /* ajax img */
-
-  $('#dig').click(function (e) { 
-    e.preventDefault();
-    let img = new FormData(document.querySelector('#infoUsuario'));
-
-    $.ajax({
-      type: 'post',
-      url: 'functions/eliminar_fondo.php',
-      data: img,
-      dataType: "json",
-      contentType: false,
-      processData: false,
-      async: true,
-      cache: false,
-      success: function (response) {
-        console.log(response);
-      }
-    });
   });
 
 

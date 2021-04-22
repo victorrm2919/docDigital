@@ -219,8 +219,4 @@
       <?php require('templates/exp/card.php') ?>
     </div>
   </div>
-  <!--datos pendiente-->
-  <div class="tab-pane animate animationfadeIn" id="confirmacion" role="tabpanel" aria-labelledby="confirmacion-tab">
-    Resumen de registro</div>
-  </div>
-
+  
