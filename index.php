@@ -506,7 +506,7 @@
 
           <div class="col-12">
           <p class="text-sm text-white opacity-8 mb-0">
-            ©Copyright 2021 DocDigital-Sactiva
+            &copy;Copyright 2021 DocDigital-Sactiva
           </p>
           </div>
 
