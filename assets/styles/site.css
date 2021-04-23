@@ -84,16 +84,12 @@ html {
 }
 
 
-
-
 /* Navbar */
-
 
 .navimg {
     height: auto;
     width: 100px;
 }
-
 
 .navHover {
     transition: all 0.5s ease-in-out;
@@ -101,8 +97,7 @@ html {
     padding: 1px 3px;
 }
 
-
-.navHover:hover{
+.navHover:hover {
     background-color: #1b6ec2;
     color: #fff !important;
     transition: all 0.5s ease-in-out;
@@ -130,6 +125,8 @@ html {
 .roudedNav {
     border-radius: 40px;
 }
+
+
 /* Plataformas */
 
 .card {
@@ -145,7 +142,6 @@ html {
     border: 1px solid rgba(252, 252, 252, 0) !important;
     border-radius: .25rem;
 }
-
 
 .imgfluid {
     max-width: 100%;
@@ -169,7 +165,6 @@ html {
     color: #fff !important;
     margin-top: 20px !important;
 }
-
 
 
 /* Noticias */
@@ -280,14 +275,22 @@ html {
     text-decoration: none;
     color: #cdd8e0;
 }
+
+
 /* Contacto */
 
-#contact-form .input-group input:focus{
+#contact-form .input-group input:focus {
     border-color: #0366d6 !important;
     box-shadow: 0 0 0 2px #0366d6 !important;
 }
 
-#contact-form .form-group textarea:focus{
+#contact-form .form-group textarea:focus {
     border-color: #0366d6 !important;
     box-shadow: 0 0 0 2px #0366d6 !important;
+}
+
+.button.positive {
+    background: linear-gradient( 180deg, var(--accent-light-color), var(--accent-color));
+    background-size: 100%;
+    background-position: 50% 50%;
 }
