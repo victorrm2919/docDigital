@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
   $('[data-toggle="datepicker"]').datepicker({
     language: 'es-ES',
     autoHide: true,
-    format: 'dd-mm-yyyy'
+    format: 'yyyy/mm/dd'
   });
 
   /* Select2 */
@@ -127,10 +127,9 @@ window.addEventListener("load", function () {
     $('#municipioDom').val('');
     $('#estadoDom').val('');
 
-
     $('#colonia').append('<option></option>');
 
-    colonia(codPost);
+    colonia(codPost, this);
   });
 
   $('#colonia').change(function (e) {
@@ -140,62 +139,6 @@ window.addEventListener("load", function () {
     $('#municipioDom').val(municipio);
     $('#estadoDom').val(estado);
   });
-
-
-  /* Listeners Buttons */
-$('#sig1').click(function (e) {
-  e.preventDefault();
-  let a = $(this).attr('data-active');
-  let b = $(this).attr('data-page');
-
-  let acti = '#' + a;
-  let nextAct = '#' + b;
-
-  let activeTab = `${acti}-tab`
-  let nextActTab = `${nextAct}-tab`
-
-  if (b == '') {
-    document.formInfo.submit();
-  } else {
-
-    $(activeTab).removeClass('active');
-    $(acti).removeClass('active show');
-    $(nextActTab).addClass('active');
-    $(nextAct).addClass('active show');
-    $(this).attr('data-active', b);
-    $(this).attr('data-page', '');
-    $(this).html('Finalizar');
-    $('.divA').removeClass('d-none')
-    $('.divS').removeClass('col-12');
-    $('.divS').addClass('col-6');
-  }
-});
-
-$('#ant1').click(function (e) {
-  e.preventDefault();
-  let a = $(this).attr('data-active');
-  let b = $(this).attr('data-page');
-
-  let acti = '#' + a;
-  let nextAct = '#' + b;
-
-  let activeTab = `${acti}-tab`
-  let nextActTab = `${nextAct}-tab`
-
-  if (b != '') {
-    $(activeTab).removeClass('active');
-    $(acti).removeClass('active show');
-    $(nextActTab).addClass('active');
-    $(nextAct).addClass('active show');
-    $('#sig1').attr('data-active', 'infoPaciente');
-    $('#sig1').attr('data-page', a);
-    $('.divA').addClass('d-none')
-    $('#sig1').html('Siguiente');
-    $('.divS').removeClass('col-6');
-    $('.divS').addClass('col-12');
-  }
-});
-
 
 
 
@@ -215,9 +158,9 @@ $('#ant1').click(function (e) {
   let but = document.getElementById('especialidad');
 
   //la funcion que oculta y muestra
-  function showHide(e){
-  e.preventDefault();
-  e.stopPropagation();
+  function showHide(e) {
+    e.preventDefault();
+    e.stopPropagation();
     if (especialidad.checked) {
       $('.formEspecialidad').addClass('showEspecialida');
     } else {
@@ -237,26 +180,148 @@ $('#ant1').click(function (e) {
     //obtiendo informacion del DOM 
     let clic = e.target;
     let existe = document.querySelector('.showEspecialida')
-    let valSelect =  $('#nombreEspecialidad').find(':selected').val();
+    let valSelect = $('#nombreEspecialidad').find(':selected').val();
     let valCed = $('#cedProfEsp').val();
-    
+
     if (existe && clic != div && valSelect != '' && valCed != '') {
       $('.formEspecialidad').removeClass('showEspecialida');
     }
   }, false);
 
-  
+
 
   /* CURP RFC */
-  $('#RFC').focus(function (e) { 
+  $('#RFC').focus(function (e) {
     e.preventDefault();
-    let curp =$('#curp').val()
+    let curp = $('#curp').val()
     if (curp != '') {
-      let rfc = curp.substring(0,10)
+      let rfc = curp.substring(0, 10)
       $(this).val(rfc);
     }
   });
 
+  // Check de modal
+
+  $('.modal-footer button').click(function (e) {
+    e.preventDefault();
+    let origen = $(this).attr('data-origen');
+    let ch = document.querySelector(origen).checked
+    if (!ch) {
+      $(origen).click();
+    }
+  });
+
+
+  // Validacion de formulario
+  $('.paciente').validate({
+    rules: {
+      nombreC: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+      fechaNacimiento: {
+        required: true
+      },
+      edad: {
+        required: true
+      },
+      estadoNacimiento: {
+        required: true
+      },
+      municipioNacimiento: {
+        required: true
+      },
+      numeroPersonal: {
+        required: true,
+        minlength: 10
+      },
+      referencia: {
+        required: true
+      },
+      numRef: {
+        required: true,
+        minlength: 10
+      }
+
+
+    },
+    messages: {
+      nombreC: {
+        required: "Ingrese tu nombre completo",
+      },
+      email: {
+        required: "Ingrese tu dirección de correo",
+        email: "Ingrese un correo electrónico válido"
+      },
+      fechaNacimiento: {
+        required: "Ingrese su fecha de nacimiento",
+      },
+      edad: {
+        required: "Ingrese su fecha de nacimiento",
+      },
+      estadoNacimiento: {
+        required: "Selecciona tu estado de nacimiento",
+      },
+      municipioNacimiento: {
+        required: "Selecciona tu municipio de nacimiento",
+      },
+      numeroPersonal: {
+        required: 'Ingrese tu numero telefonico personal',
+        minlength: 'Ingresa el numero a 10 digitos'
+      },
+      referencia: {
+        required: 'Ingrese una referencia personal'
+      },
+      numRef: {
+        required: 'Ingrese el numero telefonico de su referencia',
+        minlength: 'Ingresa el numero a 10 digitos'
+      }
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback m-2');
+      element.closest('.validForm').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass('is-invalid mb-2');
+      $('#btnFin').attr('type', 'button');
+
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid mb-2');
+      $('#btnFin').attr('type', 'submit');
+    },
+  });
+
+
+  /* Conexion Ajax */
+  $('#infoUsuario').on('submit', function (e) {
+    e.preventDefault();
+
+    if (!document.querySelector('.is-invalid')) {
+      $('#guardar-registro').val('guardar');
+
+      const datos = $(this).serializeArray();
+    
+      // console.log(datos);
+      $.ajax({
+        type: $(this).attr('method'),
+        url: $(this).attr('action'),
+        data: datos,
+        dataType: "json",
+        success: function (data) {
+          console.log(data);
+          if (data.respuesta === 'correcto') {
+            window.location.href = '../dashboard';
+          }
+        }
+      });
+    }
+
+  });
 
 });
 
@@ -264,13 +329,13 @@ $('#ant1').click(function (e) {
 function calcular_edad(fecha) {
   hoy = new Date()
 
-  var array_fecha = fecha.split("-")
+  var array_fecha = fecha.split("/")
 
   if (array_fecha.length != 3) {
     return false
   }
   var ano
-  ano = parseInt(array_fecha[2]);
+  ano = parseInt(array_fecha[0]);
 
   if (isNaN(ano)) {
     return false
@@ -281,7 +346,7 @@ function calcular_edad(fecha) {
     return false
   }
   var dia
-  dia = parseInt(array_fecha[0]);
+  dia = parseInt(array_fecha[2]);
   if (isNaN(dia)) {
     return false
   }
@@ -304,7 +369,7 @@ function calcular_edad(fecha) {
 }
 
 
-function colonia(codp) {
+function colonia(codp, obj) {
   let endpoint_sepomex = "https://api-sepomex.hckdrk.mx/query/";
   let method_sepomex = 'info_cp/';
   let cp = codp;
@@ -313,9 +378,8 @@ function colonia(codp) {
   let url = endpoint_sepomex + method_sepomex + cp + variable_string + token;
 
   $.getJSON(url,
-    function (data) {
-      console.log(data);
-      if (data.error) {
+    function (data, textStatus) {
+      if (!textStatus) {
         console.log('Hubo un error!!');
       } else {
         for (const colonia of data) {
@@ -324,8 +388,12 @@ function colonia(codp) {
           let nMunicipio = colonia.response.municipio.toUpperCase();
           let optiondiv = `<option value="${nColonia}" data-estado="${nEstado}" data-municipio="${nMunicipio}">${nColonia}</option>`;
           $('#colonia').append(optiondiv);
+          $(obj).removeClass('is-invalid');
         }
       }
     }
-  );
+  ).fail(function (textStatus ) {
+    $(obj).addClass('is-invalid');
+  });
+
 }

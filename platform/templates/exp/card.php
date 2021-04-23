@@ -82,17 +82,60 @@
               <div class="form-check col-12 my-1">
                 <input class="form-check-input" type="checkbox" value="" id="termCond" require>
                 <label class="form-check-label" for="termCond">
-                  Acepto <a href="">Terminos y Condiciones</a>.
+                  Acepto <a href="" data-bs-toggle="modal" data-bs-target="#termCondiMod">Términos y Condiciones</a>.
                 </label>
               </div>
+
+
+              <!-- Modal -->
+              <div class="modal fade" id="termCondiMod" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="termCondiModLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="termCondiModLabel">Términos y Condiciones</h5>
+                    </div>
+                    <div class="modal-body">
+                      <p class="text-justify">
+                        <?php require 'assets/docs/TERMS_AND_CONDITIONS' ?>
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-origen="#termCond">Aceptar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
             </div>
 
             <div class="row">
               <div class="form-check col-12 my-1">
                 <input class="form-check-input" type="checkbox" value="" id="aviPriva" require>
                 <label class="form-check-label" for="aviPriva">
-                  He leido el <a href="">Aviso de Privacidad</a>.
+                  He leido el <a href="" data-bs-toggle="modal" data-bs-target="#privacy">Aviso de Privacidad</a>.
                 </label>
+              </div>
+
+               <!-- Modal -->
+               <div class="modal fade" id="privacy" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="privacyLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="privacyLabel">Aviso de Privacidad</h5>
+                    </div>
+                    <div class="modal-body">
+                      <p class="text-justify">
+                        <?php require 'assets/docs/NOTICE_PRIVACY' ?>
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-origen="#aviPriva">Aceptar</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -117,7 +160,7 @@
 
   <div class="row justify-content-end mt-3">
     <div class=" col-6 col-sm-4 col-lg-3 col-xl-2">
-      <button class="btn btn-secondary" type="button">Omitir este paso</button>
+      <button class="btn btn-secondary" type="button" id="omitir">Omitir este paso</button>
     </div>
   </div>
 </div>

@@ -4,7 +4,7 @@
     <!-- info Person -->
     <div class="row">
       <div class="col-lg-4 col-md-3">
-        <div class="form-floating text-muted field Ajusttex">
+        <div class="form-floating text-muted field Ajusttex validForm">
           <input type="text" class="form-control" id="nombreC" name="nombreC" placeholder="Nombre Completo" require
             autocomplete="off" value="<?php echo $nombreC ?>">
           <label for="nombreC" title="Nombre Completo" data-title="Nombre Completo">Nombre Completo</label>
@@ -12,7 +12,7 @@
       </div>
 
       <div class="col-lg-4 col-md-3">
-        <div class="form-floating text-muted field Ajusttex">
+        <div class="form-floating text-muted field Ajusttex validForm">
           <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" require
             autocomplete="off" value="<?php echo $_SESSION['email'] ?>">
           <label for="email" title="Email" data-title="Email">Email</label>
@@ -55,14 +55,14 @@
       </div>
 
       <div class="col-md-2">
-        <div class="form-floating text-muted field Ajusttex">
+        <div class="form-floating text-muted field Ajusttex validForm">
           <input type="text" class="form-control" id="edad" name="edad" placeholder="xx Años" require autocomplete="off"
-            maxlength="12" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+            maxlength="3" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
           <label for="edad" title="Edad" data-title="Edad">Edad</label>
         </div>
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-4 validForm">
         <div class="custom-select">
           <select id="estadoNacimiento" name="estadoNacimiento" require>
             <option></option>
@@ -70,7 +70,7 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-3">
+      <div class="col-lg-4 col-md-3 validForm">
         <div class="custom-select">
           <select id="municipioNacimiento" name="municipioNacimiento" require>
             <option></option>
@@ -95,7 +95,7 @@
       <div class="col-md-3">
         <div class="form-floating text-muted field Ajusttex">
           <input type="text" class="form-control" id="cp" name="cp" placeholder="C.P." require autocomplete="off"
-            maxlength="5" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+          minlength="5" maxlength="5" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
           <label class="d-lg-block d-none" for="cp" title="Codigo Postal" data-title="Codigo Postal">Código
             Postal</label>
           <label class="d-lg-none d-block" for="cp" title="C.P." data-title="C.P.">C.P.</label>
@@ -131,9 +131,9 @@
       </div>
 
       <div class="col-md-4">
-        <div class="form-floating text-muted field Ajusttex">
+        <div class="form-floating text-muted field Ajusttex validForm">
           <input type="text" class="form-control" id="numeroPersonal" name="numeroPersonal"
-            placeholder="Telefono o Celular" require autocomplete="off" maxlength="10"
+            placeholder="Telefono o Celular" require autocomplete="off" maxlength="10" minlength="10"
             onkeypress="return event.charCode >= 48 && event.charCode <= 57">
           <label class="d-lg-block d-none" for="numeroPersonal" title="Telefono o Celular" data-title="Telefono o Celular">Telefono
             o Celular</label>
@@ -193,7 +193,7 @@
       </div>
 
       <div class="col-md-4">
-        <div class="form-floating text-muted field Ajusttex">
+        <div class="form-floating text-muted field Ajusttex validForm">
           <input type="text" class="form-control" id="referencia" name="referencia" placeholder="Referencia" require
             autocomplete="off">
           <label for="referencia" title="Referencia" data-title="Referencia">Referencia</label>
@@ -201,9 +201,9 @@
       </div>
 
       <div class="col-md-4">
-        <div class="form-floating text-muted field Ajusttex">
+        <div class="form-floating text-muted field Ajusttex validForm">
           <input type="text" class="form-control" id="numRef" name="numRef" placeholder="Telefono o Celular" require
-            maxlength="10" autocomplete="off" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+            maxlength="10" minlength="10" autocomplete="off" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
           <label class="d-lg-block d-none" for="numRef" title="Telefono o Celular" data-title="Telefono o Celular">Telefono
             o Celular</label>
           <label class="d-lg-none d-block" for="numRef" title="Telefono" data-title="Telefono">Telefono</label>
@@ -212,11 +212,3 @@
     </div>
 
   </div>
-
-  <!--datos pago-->
-  <div class="tab-pane animate animationfadeInRight" id="datosPago" role="tabpanel" aria-labelledby="datosPago-tab">
-    <div class="tarjeta">
-      <?php require('templates/exp/card.php') ?>
-    </div>
-  </div>
-  

@@ -226,14 +226,3 @@
 
 
   </div>
-
-  <!--datos pago-->
-  <div class="tab-pane animate animationfadeInRight" id="datosPago" role="tabpanel" aria-labelledby="datosPago-tab">
-    <div class="tarjeta">
-      <?php require('templates/exp/card.php') ?>
-    </div>
-  </div>
-  <!--datos pendiente-->
-  <div class="tab-pane animate animationfadeIn" id="confirmacion" role="tabpanel" aria-labelledby="confirmacion-tab">
-    Resumen de registro</div>
-  </div>
