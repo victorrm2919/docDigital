@@ -4,8 +4,7 @@
 include 'templates/exp/header.php' ;
 
 // echo $_SESSION['nombre'];
-$nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido']
-
+$nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido'];
 ?>
 
 
@@ -22,17 +21,19 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido']
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="infoPaciente-tab" type="button">Información Personal</button>
             </li>
+
+
+            <?php if($_SESSION['tipo']== 'doctor'): ?>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="datosPago-tab" type="button">Información de Pago</button>
+              <button class="nav-link" id="infoConsulta-tab" type="button">Información De Consulta</button>
             </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="confirmacion-tab" type="button">Confirmación</button>
-            </li>
+            <?php endif; ?>
+
           </ul>
           <!-- Fin llenado -->
 
           <!-- Formularios de captura -->
-          <form class="tab-content pt-2" id="infoUsuario" action="" method="post" name="formInfo">
+          <form class="tab-content pt-2 <?php echo $_SESSION['tipo']?>" id="infoUsuario" action="models/model-expediente.php" method="post" name="formInfo">
 
             <?php 
               if($_SESSION['tipo']== 'doctor') {
@@ -41,23 +42,26 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido']
                 include 'templates/exp/paciente.php';
               }
               ?>
-
-
-            <div class="row">
-              <div class="col-12 mt-4 mb-3 text-end">
-                <input type="hidden" name="tipo" value="<?php echo $_SESSION['tipo']?>">
-                <button class="btn btn-primary" id="sig1" data-page="datosPago"
-                  data-active="infoPaciente">Siguiente</button>
-              </div>
-            </div>
-
-            
           </form>
 
+          <div class="row">
+            <input type="hidden" name="user" value="<?php echo $_SESSION['id']?>" form="infoUsuario">
+            <input type="hidden" name="tipo" value="<?php echo $_SESSION['tipo']?>" form="infoUsuario">
+            <input type="hidden" id="guardar-registro" name="registro" value ="" form="infoUsuario">
+            <div class="col-12 mt-4 mb-3 text-end divS">
+              <?php if($_SESSION['tipo']== 'doctor'): ?>
+              <button class="btn btn-primary" id="btnSig" form="infoUsuario" type="button">Siguiente</button>
+              <?php endif; ?>
+              <button class="btn btn-primary <?php if($_SESSION['tipo']== 'doctor'){echo 'd-none';} ?>" id="btnFin" form="infoUsuario" type="submit">Guardar</button>
+
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 </main>
 
 

@@ -23,6 +23,7 @@
 
   <!-- custom -->
   <link rel="stylesheet" href="assets/styles/site.css" />
+  <link rel="stylesheet" href="assets/styles/animations.css" />
 
 </head>
 
