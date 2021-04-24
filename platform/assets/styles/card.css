@@ -270,6 +270,22 @@ img[data-name='default'] {
   }
 }
 
+.containerC .col2 input {
+  font-size: 15px;
+  transition: background 0.5s;
+}
+
+.containerC .col2 input:focus {
+  outline-width: 0;
+  background: rgba(31, 134, 252, 0.15);
+  transition: background 0.5s;
+}
+
+.containerC .col2 label {
+  padding-left: 8px;
+  font-size: 15px;
+  color: #444;
+}
 .containerC .col2 .ccv {
   width: 30%;
 }
@@ -307,9 +323,4 @@ img[data-name='default'] {
     width: 35px;
     height: 25px;
   }
-}
-
-
-.checkAyT label {
-  font-size: 12px;
 }
