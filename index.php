@@ -342,7 +342,7 @@
                   $description = substr($stringCut, 0, strrpos($stringCut, ' ')).'...';}
                   if ($i < 16) { 
                   echo 
-                  '<div class="listitem" role="option">
+                  '<div class="listitem hvr-pulse-shrink" role="option">
                   <img src="platform/assets/img/sacomsnews.png" class="Imgnews d-none d-sm-none d-md-block" alt="">
                   <div class="d-block d-sm-block d-md-none"> <img src="platform/assets/img/sacomsnews.png" class="Imgnewsm mx-auto d-block" alt=""></div>
                   <h5 class="card-title">'.$title.'</h5>
