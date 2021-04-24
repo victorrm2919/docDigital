@@ -45,6 +45,7 @@
     src: url('../fonts/AvenirNext-Medium.ttf') format('truetype');
 }
 
+
 /* redim */
 
 a.navbar-brand {
@@ -59,7 +60,7 @@ a {
 
 .n-cursor button {
     outline: 0;
-    cursor:default !important;
+    cursor: default !important;
 }
 
 .btn-primary {
@@ -75,7 +76,9 @@ a {
     border-color: #1861ac;
 }
 
+
 /* General */
+
 html {
     font-size: 14px;
     min-height: 100%;
@@ -106,7 +109,9 @@ select {
     }
 }
 
+
 /* Nav */
+
 .NavSact {
     font-family: "AvenirNext-Regular", Helvetica, Arial, serif;
     font-size: 22.0px;
@@ -123,7 +128,6 @@ select {
     border: 2px solid rgb(155, 190, 255);
     background-color: #0366d6;
 }
-
 
 .navimg {
     height: auto;
@@ -150,6 +154,7 @@ select {
 
 
 /* form */
+
 legend {
     font-family: 'AvenirRegular';
     font-size: .8rem;
@@ -157,6 +162,7 @@ legend {
     padding: 0;
     padding-top: 5px;
 }
+
 .field input {
     width: 100%;
     line-height: 40px;
@@ -178,14 +184,13 @@ legend {
     transition: background 0.5s;
 }
 
-.form-floating input:focus+label{
+.form-floating input:focus+label {
     color: #0366d6 !important;
 }
 
 .form-floating label {
     transition: 300ms all !important;
 }
-
 
 .Ajusttex {
     font-family: 'AvenirRegular' !important;
@@ -207,14 +212,14 @@ legend {
     font-size: 14px;
 }
 
-.custom-select > span {
-    border-bottom: 2px solid #464646 ;
+.custom-select>span {
+    border-bottom: 2px solid #464646;
     padding: 6px 0 !important;
-    border-bottom-right-radius:4px;
+    border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px
 }
 
-.custom-select{
+.custom-select {
     padding: 0.625rem 0;
 }
 
@@ -224,7 +229,7 @@ legend {
 }
 
 .select2-selection[aria-expanded="true"] span {
-    color:#0366d6 !important;
+    color: #0366d6 !important;
 }
 
 .select2-results__option--disabled {
@@ -240,24 +245,25 @@ legend {
 .radioCh {
     margin: 2px 5px;
 }
-.radioCh label{
+
+.radioCh label {
     font-family: 'AvenirRegular' !important;
     font-size: 14px;
 }
 
 
 /* Toogle especialidad */
+
 .checkEsp {
     position: relative;
 }
 
-.formEspecialidad{
+.formEspecialidad {
     position: absolute;
     z-index: 999;
 }
 
-
-.formEspecialidad{
+.formEspecialidad {
     visibility: hidden;
     opacity: 0;
     transform: translateY(-10%);
@@ -268,11 +274,11 @@ legend {
     width: 12rem;
     border-radius: 5px;
     transform: translateY(0%);
-    box-shadow: 2px 3px 10px 0 rgba(0,0,0,0.1);
+    box-shadow: 2px 3px 10px 0 rgba(0, 0, 0, 0.1);
     background-color: #8c8c8c;
 }
 
-.formEspecialidad .custom-select > span {
+.formEspecialidad .custom-select>span {
     border: none;
 }
 
@@ -281,7 +287,7 @@ legend {
     margin-bottom: 1rem;
 }
 
-.showEspecialida{
+.showEspecialida {
     visibility: visible;
     opacity: 1;
     transform: translateY(10%);
@@ -302,4 +308,10 @@ footer {
 .Ftext {
     font-size: 14px !important;
     font-family: 'AvenirBold';
+}
+
+#canvas {
+    margin: 0 auto;
+    background: #ececec;
+    width: 100%;
 }
