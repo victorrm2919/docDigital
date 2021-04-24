@@ -83,7 +83,6 @@ html {
     }
 }
 
-
 /* Navbar */
 
 .navimg {
@@ -125,8 +124,6 @@ html {
 .roudedNav {
     border-radius: 40px;
 }
-
-
 /* Plataformas */
 
 .card {
@@ -142,6 +139,7 @@ html {
     border: 1px solid rgba(252, 252, 252, 0) !important;
     border-radius: .25rem;
 }
+
 
 .imgfluid {
     max-width: 100%;
@@ -165,6 +163,7 @@ html {
     color: #fff !important;
     margin-top: 20px !important;
 }
+
 
 
 /* Noticias */
@@ -275,10 +274,7 @@ html {
     text-decoration: none;
     color: #cdd8e0;
 }
-
-
 /* Contacto */
-
 #contact-form .input-group input:focus {
     border-color: #0366d6 !important;
     box-shadow: 0 0 0 2px #0366d6 !important;

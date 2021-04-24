@@ -47,7 +47,6 @@ $(function () {
 
   /* Validacion Login */
   if (document.querySelector('.login-wrapper')) {
-    $(function () {
       $('#login-user').validate({
         rules: {
           email: {
@@ -87,8 +86,6 @@ $(function () {
           }
         },
       });
-    });
-
   }
 
 
@@ -168,7 +165,6 @@ $(function () {
   /* Validacion Crear Cuenta */
 
   if (document.querySelector('.form-create')) {
-    $(function () {
       $('#guardar-registro').validate({
         rules: {
           nombre: {
@@ -230,8 +226,6 @@ $(function () {
           }
         },
       });
-    });
-
   }
 
   /* Valida correo al crear cuenta */
