@@ -229,12 +229,22 @@
       </div>
     </div>
 
-    <div class="col-md-4 m-3">
-      <div class="form-floating text-muted field Ajusttex">
-        <input type="text" class="form-control" id="costoCons" name="costoCons" placeholder="Costo de Consulta" require
-          autocomplete="off" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-        <label for="costoCons" title="Costo de Consulta" data-title="Costo de Consulta">Costo de Consulta</label>
+    <div class="row">
+      <div class="col-md-3 m-3">
+        <div class="form-floating text-muted field Ajusttex">
+          <input type="text" class="form-control" id="costoCons" name="costoCons" placeholder="Costo de Consulta" require
+            autocomplete="off" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+          <label for="costoCons" title="Costo de Consulta" data-title="Costo de Consulta">Costo de Consulta</label>
+        </div>
       </div>
-    </div>
 
+      <div class="col-md-5 m-3">
+        <div class="form-floating text-muted field Ajusttex">
+          <input type="text" class="form-control" id="tituloConsu" name="tituloConsu" placeholder="Titulo Consulta" require
+            autocomplete="off">
+          <label for="tituloConsu" title="Titulo Consulta" data-title="Titulo Consulta">Titulo Consulta</label>
+        </div>
+      </div>
+
+    </div>
   </div>
