@@ -37,6 +37,7 @@
 <!-- Custom -->
 <script src="assets/js/exp.js"></script>
 <script src="assets/js/card.js"></script> <!-- card -->
+<script src="assets/js/photo.js"></script>
 
 </body>
 
