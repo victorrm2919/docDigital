@@ -175,6 +175,7 @@ window.addEventListener("load", function () {
     $('#nombreEspecialidad').val(null).trigger('change');
   });
 
+
   //funcion para cualquier clic en el documento
   document.addEventListener("click", function (e) {
     //obtiendo informacion del DOM 
@@ -189,7 +190,6 @@ window.addEventListener("load", function () {
   }, false);
 
 
-
   /* CURP RFC */
   $('#RFC').focus(function (e) {
     e.preventDefault();
@@ -200,7 +200,7 @@ window.addEventListener("load", function () {
     }
   });
 
-  // Check de modal
+  // Check modal
 
   $('.modal-footer button').click(function (e) {
     e.preventDefault();
@@ -211,7 +211,7 @@ window.addEventListener("load", function () {
     }
   });
 
-
+//********************PACIENTE***************************************** */
   // Validacion de formulario
   $('.paciente').validate({
     rules: {
@@ -297,7 +297,7 @@ window.addEventListener("load", function () {
   });
 
 
-  /* Conexion Ajax */
+  /* Conexion Ajax para paciente */
   $('#infoUsuario').on('submit', function (e) {
     e.preventDefault();
 
@@ -322,6 +322,20 @@ window.addEventListener("load", function () {
     }
 
   });
+
+
+//********************DOCTOR***************************************** */
+
+// Btn siguiente
+
+$('#btnSig').click(function (e) { 
+  e.preventDefault();
+  $('#infoConsulta').addClass('active show');
+  $('#infoPaciente').removeClass('active show');
+  $('#infoPaciente-tab').removeClass('active');
+  $('#infoConsulta-tab').addClass('active');
+  
+});
 
 });
 

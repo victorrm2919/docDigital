@@ -9,8 +9,6 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido'];
 
 
 
-
-
 <main role="main" class="pb-3 container-md">
   <!-- Cuerpo Formulario -->
   <div class="container body-content">
@@ -23,6 +21,14 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido'];
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="infoPaciente-tab" type="button">Información Personal</button>
             </li>
+
+
+            <?php if($_SESSION['tipo']== 'doctor'): ?>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="infoConsulta-tab" type="button">Información De Consulta</button>
+            </li>
+            <?php endif; ?>
+
           </ul>
           <!-- Fin llenado -->
 
@@ -43,7 +49,11 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido'];
             <input type="hidden" name="tipo" value="<?php echo $_SESSION['tipo']?>" form="infoUsuario">
             <input type="hidden" id="guardar-registro" name="registro" value ="" form="infoUsuario">
             <div class="col-12 mt-4 mb-3 text-end divS">
-              <button class="btn btn-primary" id="btnFin" form="infoUsuario" type="submit">Guardar</button>
+              <?php if($_SESSION['tipo']== 'doctor'): ?>
+              <button class="btn btn-primary" id="btnSig" form="infoUsuario" type="button">Siguiente</button>
+              <?php endif; ?>
+              <button class="btn btn-primary <?php if($_SESSION['tipo']== 'doctor'){echo 'd-none';} ?>" id="btnFin" form="infoUsuario" type="submit">Guardar</button>
+
             </div>
 
           </div>

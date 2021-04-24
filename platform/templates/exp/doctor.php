@@ -1,5 +1,5 @@
   <!--datos paciente-->
-  <div class="tab-pane show active animate animationfadeIn" id="infoPaciente" role="tabpanel"
+  <div class="tab-pane show active animate animationfadeIn mb-3" id="infoPaciente" role="tabpanel"
     aria-labelledby="infoPaciente-tab">
     <div class="row">
       <div class="col-md-4">
@@ -154,7 +154,7 @@
       <div class="col-md-2 col-lg-1 m-auto checkEsp">
         <div class="form-check form-check-inline containerCheck text-center">
 
-          <div class="form-group checkGroup">
+          <div class="form-group checkGroup m-2">
             <input class="form-check-input" type="checkbox" id="especialidad" name="especialidad" value="true">
             <label class="form-check-label" for="especialidad">Especialidad</label>
           </div>
@@ -195,6 +195,11 @@
 
     </div>
 
+  </div>
+
+
+  <div class="tab-pane animate animationfadeIn" id="infoConsulta" role="tabpanel" aria-labelledby="infoConsulta-tab">
+
     <!-- subir img -->
 
     <div class="row mt-3">
@@ -224,5 +229,12 @@
       </div>
     </div>
 
+    <div class="col-md-4 m-3">
+      <div class="form-floating text-muted field Ajusttex">
+        <input type="text" class="form-control" id="costoCons" name="costoCons" placeholder="Costo de Consulta" require
+          autocomplete="off" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+        <label for="costoCons" title="Costo de Consulta" data-title="Costo de Consulta">Costo de Consulta</label>
+      </div>
+    </div>
 
   </div>

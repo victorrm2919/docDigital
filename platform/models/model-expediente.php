@@ -32,7 +32,13 @@ if ($_POST['registro'] == 'guardar') {
         $stmt = $conn->prepare("INSERT INTO expedientes_pac(sexo,estadoCivil,fechaNac,edad,edoNac,munNac,dir,cp,col,edo,mun,telP,eduPro,ocu,prof,relig,refPer,telRefP,id_pac) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
         $stmt->bind_param("sssisssisssisssssii", $sexo,$estadoCivil,$fechaN,$edad,$edoNac,$munNac,$direcion,$cp,$col,$edo,$mun,$telP,$eduPro,$ocu,$prof,$relig,$refPer,$telRefP,$user);
         
+    }else if ($_POST['tipo'] == 'doctor') {
+        
+        
+        $stmt = $conn->prepare("INSERT INTO expedientes_pac(sexo,estadoCivil,fechaNac,edad,edoNac,munNac,dir,cp,col,edo,mun,telP,eduPro,ocu,prof,relig,refPer,telRefP,id_pac) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+        $stmt->bind_param("sssisssisssisssssii", $sexo,$estadoCivil,$fechaN,$edad,$edoNac,$munNac,$direcion,$cp,$col,$edo,$mun,$telP,$eduPro,$ocu,$prof,$relig,$refPer,$telRefP,$user);
     }
+
     
         $stmt->execute();
         if($stmt->affected_rows > 0 ){
