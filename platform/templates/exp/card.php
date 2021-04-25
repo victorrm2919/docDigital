@@ -76,7 +76,7 @@
               <label for="numTarjeta" title="CVV" data-title="CVV">CVV</label>
             </div>
           </div>
-          
+
           <div class="row mt-4 mb-3 mx-3 checkAyT">
             <div class="row">
               <div class="form-check col-12 my-1">
@@ -88,8 +88,8 @@
 
 
               <!-- Modal -->
-              <div class="modal fade" id="termCondiMod" data-bs-backdrop="static" data-bs-keyboard="false"
-                tabindex="-1" aria-labelledby="termCondiModLabel" aria-hidden="true">
+              <div class="modal fade" id="termCondiMod" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="termCondiModLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -101,7 +101,8 @@
                       </p>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-origen="#termCond">Aceptar</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        data-origen="#termCond">Aceptar</button>
                     </div>
                   </div>
                 </div>
@@ -118,9 +119,9 @@
                 </label>
               </div>
 
-               <!-- Modal -->
-               <div class="modal fade" id="privacy" data-bs-backdrop="static" data-bs-keyboard="false"
-                tabindex="-1" aria-labelledby="privacyLabel" aria-hidden="true">
+              <!-- Modal -->
+              <div class="modal fade" id="privacy" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="privacyLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -132,7 +133,8 @@
                       </p>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-origen="#aviPriva">Aceptar</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        data-origen="#aviPriva">Aceptar</button>
                     </div>
                   </div>
                 </div>
@@ -140,12 +142,12 @@
             </div>
           </div>
 
-        
+
         </div>
 
       </div>
     </div>
-    
+
     <div class="row justify-content-lg-end">
       <div class="openpay d-flex justify-content-lg-end justify-content-between">
         <div class="logo col-6 col-lg-2 m-2">Transacciones realizadas vía: <img src="assets/img/card/openpay.png"
@@ -164,6 +166,3 @@
     </div>
   </div>
 </div>
-
-
-

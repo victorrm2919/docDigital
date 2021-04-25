@@ -417,7 +417,7 @@
           <div class="text-center">
             <h3 class="text-gradient text-danger">Contactanos</h3>
             <p class="mb-0">
-              Tienes alguna duda con el servicion, o existe algun problema con la plataforma. Por favor contactanos, te atenderemos lo antes posible.
+              Tienes alguna duda con el servicio o existe algun problema con la plataforma. Por favor contactanos, te atenderemos lo antes posible.
             </p>
           </div>
           <form role="form" id="contact-form" method="post" autocomplete="off">

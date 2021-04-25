@@ -65,4 +65,5 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido'];
 </main>
 
 
+
 <?php include 'templates/exp/footer.php' ?>

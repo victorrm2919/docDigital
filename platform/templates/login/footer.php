@@ -2,6 +2,7 @@
     </div>
     </main>
 
+    <?php if ($pagina == 'create-account'): ?>
     <div class="promotion slideDown" id="promotion">
       <div class="conte">
         <div class="contBody">
@@ -14,7 +15,7 @@
         <p class="pt-lg-2">Solo para usuarios nuevos. Después de este período, se aplica una tarifa mensual</p>
       </div>
     </div>
-
+    <?php endif; ?>
 
 
 
@@ -33,13 +34,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"
       integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg=="
       crossorigin="anonymous"></script>
+    <!-- Validator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.6.0/validator.min.js" integrity="sha512-xYHcfaQeUiKHs9YsHqjpyLaHnh+q7y8kYuOGdh5FkJeK7Z+dZct7Yoa7h+PtsrKRh03t8eJZuSeCN7b0dkrFwA==" crossorigin="anonymous"></script>
     <!-- Sweetalert2 -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.js"></script>
 
 
     <!-- Custom -->
-    <script src="assets/js/connections.js"></script>
-    <script src="assets/js/login.js"></script>
+    <?php if ($pagina == 'create-account'): ?>
+    <script src="assets/js/create-account.js"></script>
+    <?php endif; ?>
+
+    <?php if ($pagina == 'login'): ?>
+      <script src="assets/js/login.js"></script>
+    <?php endif; ?>
 
     </body>
 

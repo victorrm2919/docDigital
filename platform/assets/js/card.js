@@ -169,4 +169,15 @@ $(function () {
       $(".date_value").text("MM / YYYY");
     }
   });
+
+    // Check modal
+
+    $('.modal-footer button').click(function (e) {
+      e.preventDefault();
+      let origen = $(this).attr('data-origen');
+      let ch = document.querySelector(origen).checked
+      if (!ch) {
+        $(origen).click();
+      }
+    });
 });

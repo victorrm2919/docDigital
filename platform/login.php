@@ -58,7 +58,7 @@ if ($tipo == "paciente") {
             <i class="fas fa-eye password-view show-password"></i>
           </div>
 
-          <div class="d-flex justify-content-between align-items-center flex-wrap mt-2">
+          <div class="d-flex justify-content-between align-items-center flex-wrap mt-2 mb-5">
             <input type="hidden" name="tipo" value="<?php echo $_GET['user'] ?>">
             <input type="submit" class="btn login-btn" id="login" value="Entrar">
             <a href="#!" class="forgot-password-link">¿Olvidaste tu contraseña?</a>
