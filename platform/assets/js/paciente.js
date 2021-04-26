@@ -223,9 +223,6 @@ $(function () {
         unhighlight: function (element, errorClass, validClass) {
             $(element).removeClass('is-invalid mb-2');
             $('#btnFin').attr('type', 'submit');
-        },
-        submitHandler: function (form) {
-            $(form).submit();
         }
     });
 
