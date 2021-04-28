@@ -3,7 +3,9 @@
 function usuario_autenticado() {
 
     if (!revisar_usuario()) {
-        header('Location:login.php?user=paciente');
+        $ruta = 'DocDigital';
+        // $ruta = $_SERVER['HTTP_HOST'];
+        header("Location:/$ruta/platform/login.php?user=paciente");
         exit();
     }
 }

@@ -50,7 +50,7 @@
 
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link TextS closeSession" id="cerrar-sesion" href="logout.php" title="Cerrar Sesión">
+              <a class="nav-link TextS closeSession" id="cerrar-sesion" href="javascript:;" title="Cerrar Sesión">
                 <span class="d-md-inline d-none">Cerrar Sesión</span> <i class="fas fa-sign-out-alt"></i>
               </a>
             </li>

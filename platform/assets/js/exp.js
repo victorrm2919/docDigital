@@ -12,9 +12,11 @@ $(function () {
       timer: 4000,
       didOpen: () => {
         Swal.showLoading()
+      },
+      willClose: () => {
+        window.location.href = 'logout.php';
       }
     })
-    Location.href = 'logout.php';
   });
 
   /* Select2 */
