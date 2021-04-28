@@ -1,5 +1,4 @@
-window.addEventListener("load", function () {
-
+$(function () {
   /* Expediente*/
 
 
@@ -34,12 +33,12 @@ window.addEventListener("load", function () {
       $("#colonia option").each(function () {
         $(this).remove();
       });
-  
+
       $('#municipioDom').val('');
       $('#estadoDom').val('');
-  
+
       $('#colonia').append('<option></option>');
-  
+
       colonia(codPost, this);
       $('.loading').addClass('d-none');
       $('#colonia').prop("disabled", false);
@@ -69,7 +68,6 @@ window.addEventListener("load", function () {
 
 
 
-
 function colonia(codp, obj) {
   let endpoint_sepomex = "https://api-sepomex.hckdrk.mx/query/";
   let method_sepomex = 'info_cp/';
@@ -93,7 +91,7 @@ function colonia(codp, obj) {
         }
       }
     }
-  ).fail(function (textStatus ) {
+  ).fail(function (textStatus) {
     $(obj).addClass('is-invalid');
   });
 

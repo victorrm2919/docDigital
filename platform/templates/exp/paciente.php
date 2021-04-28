@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-lg-4 col-md-3">
         <div class="form-floating text-muted field Ajusttex validForm">
-          <input type="text" class="form-control" id="nombreC" name="nombreC" placeholder="Nombre Completo" require
+          <input type="text" class="form-control" id="nombreC" name="nombreC" placeholder="Nombre Completo" required
             autocomplete="off" value="<?php echo $nombreC ?>">
           <label for="nombreC" title="Nombre Completo" data-title="Nombre Completo">Nombre Completo</label>
         </div>
@@ -13,7 +13,7 @@
 
       <div class="col-lg-4 col-md-3">
         <div class="form-floating text-muted field Ajusttex validForm">
-          <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" require
+          <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required
             autocomplete="off" value="<?php echo $_SESSION['email'] ?>">
           <label for="email" title="Email" data-title="Email">Email</label>
         </div>
@@ -21,7 +21,7 @@
 
       <div class="col-lg-2 col-md-3 validForm">
         <div class="custom-select">
-          <select id="sexo" name="sexo" require>
+          <select id="sexo" name="sexo" required>
             <option></option>
             <option value="F">Femenino</option>
             <option value="M">Masculino</option>
@@ -31,7 +31,7 @@
 
       <div class="col-lg-2 col-md-3 validForm">
         <div class="custom-select">
-          <select id="estadoCivil" name="estadoCivil" require>
+          <select id="estadoCivil" name="estadoCivil" required>
             <option></option>
             <option value="sol">Soltero(a)</option>
             <option value="cas">Casado(a)</option>
@@ -48,13 +48,13 @@
       <legend>Lugar y Fecha de nacimiento</legend>
       <div class="col-lg-2 col-md-3 my-3">
         <div class="field Ajusttex validForm">
-          <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" placeholder="dd/mm/aaaa" require autocomplete="off">
+          <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" placeholder="dd/mm/aaaa" required autocomplete="off">
         </div>
       </div>
 
       <div class="col-md-2">
         <div class="form-floating text-muted field Ajusttex validForm">
-          <input type="text" class="form-control" id="edad" name="edad" placeholder="xx Años" require autocomplete="off"
+          <input type="text" class="form-control" id="edad" name="edad" placeholder="xx Años" required autocomplete="off"
             maxlength="3" onkeypress="return event.charCode >= 48 && event.charCode <= 57" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
           <label for="edad" title="Edad" data-title="Edad">Edad</label>
         </div>
@@ -62,7 +62,7 @@
 
       <div class="col-md-4 validForm">
         <div class="custom-select">
-          <select id="estadoNacimiento" name="estadoNacimiento" require>
+          <select id="estadoNacimiento" name="estadoNacimiento" required>
             <option></option>
           </select>
         </div>
@@ -70,7 +70,7 @@
 
       <div class="col-lg-4 col-md-3 validForm">
         <div class="custom-select">
-          <select id="municipioNacimiento" name="municipioNacimiento" require>
+          <select id="municipioNacimiento" name="municipioNacimiento" required>
             <option></option>
             <option disabled>Selecciona un estado</option>
           </select>
@@ -84,7 +84,7 @@
       <legend>Domicilio Personal</legend>
       <div class="col-md-5">
         <div class="form-floating text-muted field Ajusttex validForm">
-          <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion" require
+          <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Direccion" required
             autocomplete="off">
           <label for="direccion" title="Dirección" data-title="Dirección">Calle y Número</label>
         </div>
@@ -92,7 +92,7 @@
 
       <div class="col-md-3">
         <div class="form-floating text-muted field Ajusttex">
-          <input type="number" class="form-control" id="cp" name="cp" placeholder="C.P." require autocomplete="off"
+          <input type="number" class="form-control" id="cp" name="cp" placeholder="C.P." required autocomplete="off"
           minlength="5" maxlength="5" onkeypress="return event.charCode >= 48 && event.charCode <= 57" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
           <label class="d-lg-block d-none" for="cp" title="Codigo Postal" data-title="Codigo Postal">Código
             Postal</label>
@@ -105,7 +105,7 @@
 
       <div class="col-md-4 validForm">
         <div class="custom-select">
-          <select id="colonia" name="colonia" require>
+          <select id="colonia" name="colonia" required>
             <option></option>
             <option disabled>Digita tu C.P.</option>
           </select>
@@ -117,7 +117,7 @@
     <div class="row">
       <div class="col-md-4">
         <div class="form-floating text-muted field Ajusttex validForm">
-          <input type="text" class="form-control" id="estadoDom" name="estadoDom" placeholder="Estado" require
+          <input type="text" class="form-control" id="estadoDom" name="estadoDom" placeholder="Estado" required
             autocomplete="off">
           <label for="estadoDom" title="Estado" data-title="Estado">Estado</label>
         </div>
@@ -125,7 +125,7 @@
 
       <div class="col-md-4">
         <div class="form-floating text-muted field Ajusttex validForm">
-          <input type="text" class="form-control" id="municipioDom" name="municipioDom" placeholder="Municipio" require
+          <input type="text" class="form-control" id="municipioDom" name="municipioDom" placeholder="Municipio" required
             autocomplete="off">
           <label for="municipioDom" title="Municipio" data-title="Municipio">Municipio</label>
         </div>
@@ -134,7 +134,7 @@
       <div class="col-md-4">
         <div class="form-floating text-muted field Ajusttex validForm">
           <input type="number" class="form-control" id="numeroPersonal" name="numeroPersonal"
-            placeholder="Telefono o Celular" require autocomplete="off" maxlength="10" minlength="10"
+            placeholder="Telefono o Celular" required autocomplete="off" maxlength="10" minlength="10"
             onkeypress="return event.charCode >= 48 && event.charCode <= 57" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
           <label class="d-lg-block d-none" for="numeroPersonal" title="Telefono o Celular" data-title="Telefono o Celular">Telefono
             o Celular</label>
@@ -148,7 +148,7 @@
       <legend class="mt-2">Eduacion y Profesión</legend>
       <div class="col-md-4 validForm">
         <div class="custom-select">
-          <select id="escolaridad" name="escolaridad" require>
+          <select id="escolaridad" name="escolaridad" required>
             <option></option>
             <option value="pri">Primaria</option>
             <option value="sec">Secundaria</option>
@@ -162,7 +162,7 @@
 
       <div class="col-md-4 validForm">
         <div class="custom-select">
-          <select id="ocupacion" name="ocupacion" require>
+          <select id="ocupacion" name="ocupacion" required>
             <option></option>
             <option value="emp">Empleado(a)</option>
             <option value="pens">Pensionado(a)</option>
@@ -175,7 +175,7 @@
 
       <div class="col-md-4">
         <div class="form-floating text-muted field Ajusttex validForm">
-          <input type="text" class="form-control" id="profesion" name="profesion" placeholder="Profesión" require
+          <input type="text" class="form-control" id="profesion" name="profesion" placeholder="Profesión" required
             autocomplete="off">
           <label for="profesion" title="Profesión" data-title="Profesión">Profesión</label>
         </div>
@@ -187,7 +187,7 @@
       <legend>Religión / Referencia Personal</legend>
       <div class="col-md-4">
         <div class="form-floating text-muted field Ajusttex validForm">
-          <input type="text" class="form-control" id="religion" name="religion" placeholder="Religión" require
+          <input type="text" class="form-control" id="religion" name="religion" placeholder="Religión" required
             autocomplete="off">
           <label for="religion" title="Religión" data-title="Religión">Religión</label>
         </div>
@@ -195,7 +195,7 @@
 
       <div class="col-md-4">
         <div class="form-floating text-muted field Ajusttex validForm">
-          <input type="text" class="form-control" id="referencia" name="referencia" placeholder="Referencia" require
+          <input type="text" class="form-control" id="referencia" name="referencia" placeholder="Referencia" required
             autocomplete="off">
           <label for="referencia" title="Referencia" data-title="Referencia">Referencia</label>
         </div>
@@ -203,7 +203,7 @@
 
       <div class="col-md-4">
         <div class="form-floating text-muted field Ajusttex validForm">
-          <input type="number" class="form-control" id="numRef" name="numRef" placeholder="Telefono o Celular" require
+          <input type="number" class="form-control" id="numRef" name="numRef" placeholder="Telefono o Celular" required
             maxlength="10" minlength="10" autocomplete="off" onkeypress="return event.charCode >= 48 && event.charCode <= 57" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
           <label class="d-lg-block d-none" for="numRef" title="Telefono o Celular" data-title="Telefono o Celular">Telefono
             o Celular</label>

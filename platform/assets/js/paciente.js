@@ -217,17 +217,15 @@ $(function () {
         },
         highlight: function (element, errorClass, validClass) {
             $(element).addClass('is-invalid mb-2');
-            $('#btnFin').attr('type', 'button');
-
         },
         unhighlight: function (element, errorClass, validClass) {
-            $(element).removeClass('is-invalid mb-2');
-            $('#btnFin').attr('type', 'submit');
+            $(element).removeClass('is-invalid mb-2');;
         }
     });
 
 
-    /* Conexion Ajax para paciente */
+
+    /* Conexion Ajax Paciente*/
     $('#infoUsuario').on('submit', function (e) {
         e.preventDefault();
 
@@ -253,49 +251,48 @@ $(function () {
 
     });
 
-
 });
 
 
 
 function calcular_edad(fecha) {
     hoy = new Date()
-  
+
     var array_fecha = fecha.split("-")
-  
+
     if (array_fecha.length != 3) {
-      return false
+        return false
     }
     var ano
     ano = parseInt(array_fecha[0]);
-  
+
     if (isNaN(ano)) {
-      return false
+        return false
     }
     var mes
     mes = parseInt(array_fecha[1]);
     if (isNaN(mes)) {
-      return false
+        return false
     }
     var dia
     dia = parseInt(array_fecha[2]);
     if (isNaN(dia)) {
-      return false
+        return false
     }
     if (ano <= 99) {
-      ano += 1900
+        ano += 1900
     }
     edad = hoy.getFullYear() - ano - 1;
-  
+
     if (hoy.getMonth() + 1 - mes < 0) {
-      return edad
+        return edad
     }
     if (hoy.getMonth() + 1 - mes > 0) {
-      return edad + 1
+        return edad + 1
     }
-  
+
     if (hoy.getUTCDate() - dia >= 0)
-      return edad + 1
-  
+        return edad + 1
+
     return edad
-  }  
+}
