@@ -37,12 +37,12 @@ document.addEventListener('click', (e) => {
         if (e.target.classList.contains('pinhole-add')) {
             Caman('#canvas', image, function() {
                     this.pinhole().render();
-                    let firmDig=document.querySelector('#firmaDig')
-                    firmDig.value=document.querySelector('#canvas').toDataURL('image/png');
                 })
             $(this).addClass('disabled');
         }
     }
+    let firmDig=document.querySelector('#firmaDig')
+    firmDig.value=document.querySelector('#canvas').toDataURL();
 })
 
 //funcion para descargar
