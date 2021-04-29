@@ -92,7 +92,7 @@ html {
 }
 
 .navHover:hover {
-    background-color: #1b6ec2;
+    background-color: #0984e3;
     color: #fff !important;
     transition: all 0.5s ease-in-out;
 }
@@ -113,7 +113,7 @@ html {
 }
 
 .bgBlue {
-    background-color: #1b6ec2;
+    background-color: #0984e3;
 }
 
 .roudedNav {
@@ -166,7 +166,7 @@ html {
 .rrSS {
     height: 30rem;
     overflow: auto;
-    border: 2px solid #0366d6;
+    border: 2px solid #0984e3;
     border-radius: 10px;
     padding: 25px;
     background: #fff;
@@ -197,7 +197,7 @@ html {
 
 .timestamp {
     margin-bottom: 20px;
-    color: #0366d6;
+    color: #0984e3;
     padding: 10px;
 }
 
@@ -231,7 +231,7 @@ html {
     font-family: 'AvenirBold';
     font-size: 36px;
     margin-bottom: 20px;
-    color: #0366d6;
+    color: #0984e3;
 }
 
 .card-title {
@@ -271,13 +271,13 @@ html {
 }
 /* Contacto */
 #contact-form .input-group input:focus {
-    border-color: #0366d6 !important;
-    box-shadow: 0 0 0 2px #0366d6 !important;
+    border-color: #0984e3 !important;
+    box-shadow: 0 0 0 2px #0984e3 !important;
 }
 
 #contact-form .form-group textarea:focus {
-    border-color: #0366d6 !important;
-    box-shadow: 0 0 0 2px #0366d6 !important;
+    border-color: #0984e3 !important;
+    box-shadow: 0 0 0 2px #0984e3 !important;
 }
 
 .button.positive {
