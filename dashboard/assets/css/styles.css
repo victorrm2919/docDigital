@@ -1,0 +1,57 @@
+/* Ajustes lib */
+
+.bgBlue {
+    background-color: #218cfe !important;
+    background-image: linear-gradient(310deg, #218cfe 0%, #218cfe 100%) !important;
+}
+
+.bgBlueGradient {
+    /* background: linear-gradient(0deg,#335af4,#1d8bf8); */
+    
+    background: #48a0fd;
+    background-size: auto;
+    background: -moz-linear-gradient(top, #48a0fd 0%, rgba(64, 145, 255, 0.7) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #48a0fd), color-stop(100%, rgba(64, 145, 255, 0.7)));
+    background: -webkit-linear-gradient(top, #48a0fd 0%, rgba(64, 145, 255, 0.7) 100%);
+    background: -o-linear-gradient(top, #48a0fd 0%, rgba(64, 145, 255, 0.7) 100%);
+    background: -ms-linear-gradient(top, #48a0fd 0%, rgba(64, 145, 255, 0.7) 100%);
+    background: linear-gradient(to bottom, #48a0fd 0%, rgba(64, 145, 255, 0.7) 100%);
+        background-size: auto;
+    background-size: 150% 150%;
+}
+
+.navsid .nav-link {
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+
+.navsid .nav-link.active {
+    background-color: #f8f9fa !important;
+    color: #252f40!important;
+}
+
+
+
+@media (min-width:1200px) {
+    .nav-item {
+        width: 110% !important;
+    }
+}
+
+.hvr-sweep-to-left::before {
+    background-color: #f8f9fa !important;
+    border-radius: 0.5rem !important;
+}
+.hvr-sweep-to-left:hover{
+    color: #252f40!important;
+    box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.hvr-sweep-to-left:hover .icon {
+    background-image: linear-gradient(310deg, #218cfe 0%, #218cfe 100%) !important;
+}
+
+.hvr-sweep-to-left:hover .icon path {
+   fill: #fff !important;
+}
