@@ -64,7 +64,7 @@ if ($_POST['registro'] == 'guardar') {
             $esp = $_POST['nombreEspecialidad'];
             $cedEsp = $_POST['cedProfEsp'];
             $costoCons = $_POST['costoCons'];
-            $tituloConsu = $_POST['tituloConsu'];
+            $clabe = $_POST['clabe'];
             
             /* Nombre firma */
             $nombre = $_POST['nombreC'];
@@ -77,8 +77,8 @@ if ($_POST['registro'] == 'guardar') {
             $subir = uploadImgBase64($_POST['firmaDig'], $nombreImg);
 
         
-            $stmt = $conn->prepare("INSERT INTO expedientes_doc(curp,rfc,hc,telPer,direc,cp,col,edo,mun,telCons,uni,titulo,cedProf,esp,cedEsp,costoCons,tituloConsu,url_firma,id_doc) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-            $stmt->bind_param("sssisisssissisisssi", $curp,$rfc,$hc,$telPer,$direc,$cp,$col,$edo,$mun,$telCons,$uni,$titulo,$cedProf,$esp,$cedEsp,$costoCons,$tituloConsu,$nombreImg,$user);
+            $stmt = $conn->prepare("INSERT INTO expedientes_doc(curp,rfc,hc,telPer,direc,cp,col,edo,mun,telCons,uni,titulo,cedProf,esp,cedEsp,costoCons,clabe,url_firma,id_doc) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            $stmt->bind_param("sssisisssissisisisi", $curp,$rfc,$hc,$telPer,$direc,$cp,$col,$edo,$mun,$telCons,$uni,$titulo,$cedProf,$esp,$cedEsp,$costoCons,$clabe,$nombreImg,$user);
 
             $stmt->execute();
             if($stmt->affected_rows > 0 ){

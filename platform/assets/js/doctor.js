@@ -90,8 +90,10 @@ $(function () {
                 required: true,
                 number: true
             },
-            tituloConsu: {
-                required: true
+            clabe: {
+                required: true,
+                number: true,
+                minlength: 18
             }
         },
         messages: {
@@ -148,8 +150,10 @@ $(function () {
                 required: "Coloque el precio de su consulta",
                 number: "Solo numeros"
             },
-            tituloConsu: {
-                required: "Este campo es requerido"
+            clabe: {
+                required: "Ingrese su CLABE interbancaria",
+                number: "Ingrese su CLABE correctamente",
+                minlength: "Ingrese una CLABE valida"
             }
         },
         errorElement: 'span',

@@ -231,9 +231,10 @@
 
       <div class="col-md-5">
         <div class="form-floating text-muted field Ajusttex validForm">
-          <input type="text" class="form-control" id="tituloConsu" name="tituloConsu" placeholder="Titulo Consulta"
-            required autocomplete="off">
-          <label for="tituloConsu" title="Titulo Consulta" data-title="Titulo Consulta">Titulo Consulta</label>
+          <input type="text" class="form-control" id="clabe" name="clabe" placeholder="Clabe Interbancaria"
+            required autocomplete="off" maxlength="18" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+          <label for="clabe" title="Clabe Interbancaria" data-title="Clabe Interbancaria">Clabe Interbancaria</label>
         </div>
       </div>
 
