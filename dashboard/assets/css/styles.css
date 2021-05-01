@@ -4,9 +4,16 @@
     font-style: normal;
     font-weight: 400;
     src: url('../fonts/material-icons.woff2') format('woff2');
-  }
-  
-  .material-icons-outlined {
+}
+
+body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, .btn-simple, .alert, a, .td-name, td, button.close {
+    font-family: 'Karla', sans-serif !important;
+}
+
+
+
+
+.material-icons-outlined {
     font-family: 'Material Icons Outlined';
     font-weight: normal;
     font-style: normal;
@@ -20,15 +27,13 @@
     direction: ltr;
     -moz-font-feature-settings: 'liga';
     -moz-osx-font-smoothing: grayscale;
-  }
-
-
+}
 
 /* Ajustes lib */
 
 .bgBlue {
-    background-color: #218cfe !important;
-    background-image: linear-gradient(310deg, #218cfe 0%, #218cfe 100%) !important;
+    background-color: #1087e3 !important;
+    background-image: linear-gradient(310deg, #1087e3 0%, #1087e3 100%) !important;
 }
 
 .sidebar[data-color="bluDoc"]:after,
@@ -42,19 +47,27 @@
     background: -o-linear-gradient(top, #1087e3 0%, rgba(51, 118, 211, 0.4) 100%);
     background: -ms-linear-gradient(top, #1087e3 0%, rgba(51, 118, 211, 0.4) 100%);
     background: linear-gradient(to bottom, #1087e3 0%, rgba(51, 118, 211, 0.4) 100%);
-        background-size: auto;
+    background-size: auto;
     background-size: 150% 150%;
 }
 
-.btn-bluDoc {
-    border: 1px solid #218cfe;
-        border-top-width: 1px;
-        border-right-width: 1px;
-        border-bottom-width: 1px;
-        border-left-width: 1px;
+.btn-bluDoc,.btn-bluDoc:active,
+.btn-bluDoc.active,
+.open>.btn-bluDoc.dropdown-toggle{
+    border: 1px solid #1087e3;
     color: #FFFFFF;
-    background-color: #218cfe;
+    background-color: #1087e3;
     cursor: pointer;
+}
+
+.btn-bluDoc:hover,
+.btn-bluDoc:focus,
+.btn-bluDoc:active,
+.btn-bluDoc.active,
+.open>.btn-bluDoc.dropdown-toggle {
+    background-color: #2980b9 !important;
+    color: #FFFFFF;
+    border-color: #2980b9 !important;
 }
 
 .navsid .nav-item .nav-link {
@@ -72,7 +85,7 @@
 }
 
 
-.navsid .nav-item.active > a:not([data-toggle="collapse"]):before {
+.navsid .nav-item.active>a:not([data-toggle="collapse"]):before {
     border-right: 17px solid #cfcfca;
     border-top: 17px solid transparent;
     border-bottom: 17px solid transparent;
@@ -85,7 +98,7 @@
     transition: opacity 150ms ease-in;
 }
 
-.navsid .nav-item.active > a:not([data-toggle="collapse"]):after {
+.navsid .nav-item.active>a:not([data-toggle="collapse"]):after {
     border-right: 17px solid #f4f3ef;
     border-top: 17px solid transparent;
     border-bottom: 17px solid transparent;
@@ -116,8 +129,9 @@
     background-color: #f8f9fa !important;
     border-radius: 0.5rem !important;
 }
-.hvr-sweep-to-left:hover{
-    color: #252f40!important;
+
+.hvr-sweep-to-left:hover {
+    color: #252f40 !important;
     box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05) !important;
 }
 
@@ -126,5 +140,5 @@
 }
 
 .hvr-sweep-to-left:hover .icon path {
-   fill: #fff !important;
+    fill: #fff !important;
 }
