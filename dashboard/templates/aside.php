@@ -24,17 +24,17 @@
                     </span>
                 </a>
                 <div class="collapse" id="collapseExample">
-                    <ul class="nav">
-                        <li>
-                            <a class="profile-dropdown" href="#pablo">
-                                <span class="sidebar-mini"><i class="fas fa-user"></i></span>
-                                <span class="sidebar-normal">Mi perfil</span>
+                    <ul class="nav mt-3">
+                        <li class="nav-item">
+                            <a class="profile-dropdown nav-link" href="#">
+                                <span class="sidebar-mini"><i class="material-icons-outlined">person</i></span>
+                                <p class="sidebar-normal">Mi perfil</p>
                             </a>
                         </li>
-                        <li>
-                            <a class="profile-dropdown" href="#pablo">
-                                <span class="sidebar-mini"><i class="fas fa-user-edit"></i></span>
-                                <span class="sidebar-normal">Editar Perfil</span>
+                        <li class="nav-item">
+                            <a class="profile-dropdown nav-link" href="#">
+                                <span class="sidebar-mini"><i class="material-icons-outlined">manage_accounts</i></span>
+                                <p class="sidebar-normal">Editar Perfil</p>
                             </a>
                         </li>
                     </ul>
@@ -44,35 +44,36 @@
         <ul class="nav navsid">
             <li class="nav-item active">
                 <a class="nav-link" href="./index.php">
-                    <i class="fas fa-home"></i>
+                    <i class="material-icons-outlined">home</i>
                     <p>Inicio</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">
-                    <i class="fas fa-book-medical"></i>
+                    <i class="material-icons-outlined">group</i>
                     <p>Pacientes</p>
                 </a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link" href="./calendar.php">
-                    <i class="fas fa-calendar-alt"></i>
+                    <i class="material-icons-outlined">today</i>
                     <p>Calendario</p>
                 </a>
             </li>
 
             <li class="nav-item ">
                 <a class="nav-link" href="./calendar.php">
-                    <i class="far fa-address-book"></i>
+                    <i class="material-icons-outlined">contacts</i>
                     <p>Listado Doctores</p>
                 </a>
             </li>
 
-            <hr class="line bg-white">
-
+        </ul>
+        <hr class="line bg-white">
+        <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#pagesExamples">
-                    <i class="fas fa-external-link-alt"></i>
+                    <i class="material-icons-outlined">bookmarks</i>
                     <p>
                         Ligas de interes
                         <b class="caret"></b>
