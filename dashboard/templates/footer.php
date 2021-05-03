@@ -78,8 +78,9 @@
 <script src="assets/js/plugins/fullcalendar.min.js"></script>
 <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="assets/js/light-bootstrap-dashboard.js?v=2.0.1" type="text/javascript"></script>
+
 <!-- Light Dashboard DEMO methods, don't include it in your project! -->
-<!-- <script src="assets/js/demo.js"></script>
+<script src="assets/js/demo.js"></script>
 <script type="text/javascript">
     $().ready(function () {
         demo.initDashboardPageCharts();
@@ -87,6 +88,6 @@
         demo.initVectorMap();
         demo.initFullCalendar();
     });
-</script> -->
+</script>
 
 </html>

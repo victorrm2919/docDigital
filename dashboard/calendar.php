@@ -6,7 +6,7 @@ require 'templates/aside.php' ;
     <div class="main-panel">
         <?php require 'templates/navbar.php' ?>
         
-        <div class="content">
+        <div class="content animate animationfadeIn">
             <div class="container-fluid">
                 <div class="header text-center">
                     <h3 class="title">FullCalendar.io</h3>

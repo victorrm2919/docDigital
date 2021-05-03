@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg navbar-fixed">
     <div class="container-fluid">
         <div class="navbar-wrapper">
             <div class="navbar-minimize">

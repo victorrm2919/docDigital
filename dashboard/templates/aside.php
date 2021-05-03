@@ -62,7 +62,14 @@
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="./calendar.php">
+                <a class="nav-link" href="#">
+                    <i class="material-icons-outlined">note_alt</i>
+                    <p>Notas</p>
+                </a>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link" href="#">
                     <i class="material-icons-outlined">contacts</i>
                     <p>Listado Doctores</p>
                 </a>
@@ -82,33 +89,21 @@
                 <div class="collapse " id="pagesExamples">
                     <ul class="nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="./pages/login.html">
-                                <span class="sidebar-mini">LP</span>
-                                <span class="sidebar-normal">Login Page</span>
+                            <a class="nav-link" href="https://www.vademecum.es/medicamentos-mx-a_1" target="_blank">
+                                <span class="sidebar-mini">VDC</span>
+                                <span class="sidebar-normal">Lista Medicamentos 1</span>
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="./pages/register.html">
-                                <span class="sidebar-mini">RP</span>
-                                <span class="sidebar-normal">Register Page</span>
+                            <a class="nav-link" href="https://www.medicamentosplm.com/Home/Medicamento/A/1" target="_blank">
+                                <span class="sidebar-mini">PLM</span>
+                                <span class="sidebar-normal">Lista Medicamentos 2</span>
                             </a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link" href="./pages/lock.html">
-                                <span class="sidebar-mini">LSP</span>
-                                <span class="sidebar-normal">Lock Screen Page</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a class="nav-link" href="./pages/user.html">
-                                <span class="sidebar-mini">UP</span>
-                                <span class="sidebar-normal">User Page</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a class="nav-link" href="#lbd">
-                                <span class="sidebar-mini">MCS</span>
-                                <span class="sidebar-normal">More coming soon...</span>
+                            <a class="nav-link" href="https://www.gob.mx/cofepris" target="_blank">
+                                <span class="sidebar-mini">COF</span>
+                                <span class="sidebar-normal">COFEPRIS</span>
                             </a>
                         </li>
                     </ul>
