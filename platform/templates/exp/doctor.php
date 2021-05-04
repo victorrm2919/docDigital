@@ -231,8 +231,8 @@
 
       <div class="col-md-5">
         <div class="form-floating text-muted field Ajusttex validForm">
-          <input type="text" class="form-control" id="clabe" name="clabe" placeholder="Clabe Interbancaria"
-            required autocomplete="off" maxlength="18" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+          <input type="text" class="form-control" id="clabe" name="clabe" placeholder="Clabe Interbancaria" required
+            autocomplete="off" maxlength="18" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
             oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
           <label for="clabe" title="Clabe Interbancaria" data-title="Clabe Interbancaria">Clabe Interbancaria</label>
         </div>
@@ -253,7 +253,8 @@
             <div class="form-img col-12 col-lg-6">
               <div class="custom-file input-group">
                 <input type="hidden" name="firmaDig" id="firmaDig">
-                <input class="custom-file-input form-control" id="upload-file" name="firma" type="file" accept="image/*" required>
+                <input class="custom-file-input form-control" id="upload-file" name="firma" type="file" accept="image/*"
+                  required>
                 <label class="custom-file-label" for="upload-file"></label>
                 </input>
               </div>
@@ -267,10 +268,11 @@
 
         <div class="card-footer">
           <div class="row justify-content-between align-items-center">
-            <div class="col-6">
-              <p class="form-text m-0">Favor de subir una imagen con fondo blanco y con una buena iluminación</p>
+            <div class="col-12 col-md-6 mb-3">
+              <p class="form-text m-0">Favor de subir una imagen con fondo blanco y con una buena iluminación, presiona
+                "DIGITALIZAR" para modificar la imagen en el formato requerido</p>
             </div>
-            <button type="button" class="btn btn-primary col-2 d-block filter-btn pinhole-add col-6"
+            <button type="button" class="btn btn-primary col-12 d-block filter-btn pinhole-add col-md-3"
               id="dig">Digitalizar</button>
           </div>
         </div>

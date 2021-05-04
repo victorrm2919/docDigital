@@ -35,16 +35,11 @@ $(function () {
       $("#colonia option").each(function () {
         $(this).remove();
       });
-
       $('#municipioDom').val('');
       $('#estadoDom').val('');
-
       $('#colonia').append('<option></option>');
-
       colonia(codPost, this);
-      $('.loading').addClass('d-none');
-      $('#colonia').prop("disabled", false);
-    }, 1000)
+    }, 2000)
   });
 
   $('#colonia').change(function (e) {
@@ -65,6 +60,19 @@ $(function () {
       $(this).val(rfc);
     }
   });
+
+
+
+       // Check modal
+
+       $('.modal-footer button').click(function (e) {
+        e.preventDefault();
+        let origen = $(this).attr('data-origen');
+        let ch = document.querySelector(origen).checked
+        if (!ch) {
+          $(origen).click();
+        }
+      });
 
 });
 
@@ -90,11 +98,15 @@ function colonia(codp, obj) {
           let optiondiv = `<option value="${nColonia}" data-estado="${nEstado}" data-municipio="${nMunicipio}">${nColonia}</option>`;
           $('#colonia').append(optiondiv);
           $(obj).removeClass('is-invalid');
+
+          $('.loading').addClass('d-none');
+          $('#colonia').prop("disabled", false);
         }
       }
     }
   ).fail(function (textStatus) {
     $(obj).addClass('is-invalid');
+    $('.loading').addClass('d-none');
   });
 
 }

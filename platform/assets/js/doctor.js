@@ -176,6 +176,8 @@ $(function () {
         e.preventDefault();
 
         if (!document.querySelector('.is-invalid')) {
+
+            $('.loading').removeClass('d-none');
             $('#guardar-registro').val('guardar');
 
             const datos = new FormData(this);
@@ -194,7 +196,24 @@ $(function () {
                     console.log(data);
                     if (data.respuesta === 'correcto') {
                         window.location.href = '../dashboard';
+                    }else if (data.respuesta === 'Error') {
+                        $('.loading').addClass('d-none');
+
+                        const Toast = Swal.mixin({
+                            toast: true,
+                            position: 'top-end',
+                            showConfirmButton: false,
+                            timer: 2000,
+                            timerProgressBar: true,
+                          })
+                          
+                          Toast.fire({
+                            icon: 'error',
+                            title: 'Valide su información o reintente nuevamente'
+                          })
+                        
                     }
+
                 }
             });
         }

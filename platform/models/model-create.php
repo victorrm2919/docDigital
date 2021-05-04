@@ -19,10 +19,10 @@ if ($_POST['registro'] == 'nuevo') {
     try {
 
         if ($tipo == 'doctor') {
-            $stmt = $conn->prepare("INSERT INTO doctor (nombres, apellidos, email, password) VALUES (?, ?, ?, ?)");
+            $stmt = $conn->prepare("INSERT INTO doctor (nombres, apellidos, email, password, fechaCreate) VALUES (?, ?, ?, ?, now())");
         }elseif ($tipo == 'paciente') {
             $stmt = $conn->prepare("INSERT INTO paciente (nombres, apellidos, email, password) VALUES (?, ?, ?, ?)");
-        }
+        }   
 
         $stmt->bind_param("ssss", $nombre, $apellido, $email, $password);
         $stmt->execute();

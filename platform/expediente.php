@@ -36,6 +36,40 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido'];
               ?>
           </form>
 
+          <div class="row justify-content-end mt-5">
+            <div class="col-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="aviPriva" required>
+                <label class="form-check-label" for="aviPriva">
+                  He leido el <a href="" data-bs-toggle="modal" data-bs-target="#privacy">Aviso de Privacidad</a>.
+                </label>
+              </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="privacy" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="privacyLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title m-auto" id="privacyLabel">Aviso de Privacidad</h3>
+                    </div>
+                    <div class="modal-body">
+                      <p class="text-justify">
+                        <?php require 'assets/docs/PRIVACY_SACTIVA' ?>
+                      </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        data-origen="#aviPriva">Aceptar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+
+
+
           <div class="row">
             <input type="hidden" name="user" value="<?php echo $_SESSION['id']?>" form="infoUsuario">
             <input type="hidden" name="tipo" value="<?php echo $_SESSION['tipo']?>" form="infoUsuario">
