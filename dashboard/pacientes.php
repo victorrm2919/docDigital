@@ -4,7 +4,7 @@
     <div class="main-panel">
     <?php require 'templates/navbar.php' ?>
 
-    <div class="content">
+    <div class="content animate animationfadeIn">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">

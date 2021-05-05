@@ -80,65 +80,6 @@ body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, 
 }
 
 
-.navsid .nav-item.active {
-    position: relative;
-}
-
-
-.navsid .nav-item.active>a:not([data-toggle="collapse"]):before {
-    border-right: 17px solid #cfcfca;
-    border-top: 17px solid transparent;
-    border-bottom: 17px solid transparent;
-    content: "";
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    opacity: 1;
-    top: 7px;
-    transition: opacity 150ms ease-in;
-}
-
-.navsid .nav-item.active>a:not([data-toggle="collapse"]):after {
-    border-right: 17px solid #f4f3ef;
-    border-top: 17px solid transparent;
-    border-bottom: 17px solid transparent;
-    content: "";
-    display: inline-block;
-    position: absolute;
-    right: -1px;
-    opacity: 1;
-    top: 7px;
-    transition: opacity 150ms ease-in;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.hvr-sweep-to-left::before {
-    background-color: #f8f9fa !important;
-    border-radius: 0.5rem !important;
-}
-
-.hvr-sweep-to-left:hover {
-    color: #252f40 !important;
-    box-shadow: 0 20px 27px 0 rgba(0, 0, 0, 0.05) !important;
-}
-
-.hvr-sweep-to-left:hover .icon {
-    background-image: linear-gradient(310deg, #218cfe 0%, #218cfe 100%) !important;
-}
-
-.hvr-sweep-to-left:hover .icon path {
-    fill: #fff !important;
+.sidebar {
+    z-index: 1040 !important;
 }

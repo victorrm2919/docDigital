@@ -49,7 +49,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="pacientes.php">
+                <a class="nav-link" href="./pacientes.php">
                     <i class="material-icons-outlined">group</i>
                     <p>Pacientes</p>
                 </a>
@@ -62,14 +62,14 @@
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="">
                     <i class="material-icons-outlined">note_alt</i>
                     <p>Notas</p>
                 </a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="./doctores.php">
                     <i class="material-icons-outlined">contacts</i>
                     <p>Listado Doctores</p>
                 </a>
