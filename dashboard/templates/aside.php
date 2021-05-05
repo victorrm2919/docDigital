@@ -42,14 +42,14 @@
             </div>
         </div>
         <ul class="nav navsid">
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="./index.php">
                     <i class="material-icons-outlined">home</i>
                     <p>Inicio</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="pacientes.php">
                     <i class="material-icons-outlined">group</i>
                     <p>Pacientes</p>
                 </a>

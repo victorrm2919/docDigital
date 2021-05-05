@@ -1,5 +1,5 @@
 <?php require 'templates/header.php' ?>
-<div class="wrapper">
+<div class="wrapper index">
     <?php require 'templates/aside.php' ?>
     <div class="main-panel">
         <?php require 'templates/navbar.php' ?>

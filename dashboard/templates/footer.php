@@ -79,6 +79,9 @@
 <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="assets/js/light-bootstrap-dashboard.js?v=2.0.1" type="text/javascript"></script>
 
+<!-- JS Custom -->
+<script src="assets/js/main.js"></script>
+
 <!-- Light Dashboard DEMO methods, don't include it in your project! -->
 <script src="assets/js/demo.js"></script>
 <script type="text/javascript">

@@ -1,11 +1,8 @@
-<?php 
-
-require 'templates/header.php';
-require 'templates/aside.php' ;
-?>
+<?php require 'templates/header.php' ?>
+<div class="wrapper calendario">
+    <?php require 'templates/aside.php' ?>
     <div class="main-panel">
         <?php require 'templates/navbar.php' ?>
-        
         <div class="content animate animationfadeIn">
             <div class="container-fluid">
                 <div class="header text-center">
