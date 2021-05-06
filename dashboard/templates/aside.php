@@ -62,7 +62,7 @@
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="./notas.php">
                     <i class="material-icons-outlined">note_alt</i>
                     <p>Notas</p>
                 </a>

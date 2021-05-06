@@ -1,3 +1,12 @@
+<?php 
+
+require "../platform/functions/functions.php" ;
+
+$pagina = obtenerPaginaActual();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

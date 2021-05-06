@@ -7,7 +7,20 @@
                     <i class="fa fa-navicon visible-on-sidebar-mini"></i>
                 </button>
             </div>
-            <a class="navbar-brand" href="#">Dashboard</a>
+
+            <?php if ($pagina == "index"){ ?>
+                <a class="navbar-brand">Dashboard</a>
+            <?php }else if ($pagina == "pacientes"){?>
+                <a class="navbar-brand">Pacientes</a>
+            <?php }else if ($pagina == "calendar"){?>
+                <a class="navbar-brand">Calendario</a>
+            <?php }else if ($pagina == "notas"){?>
+                <a class="navbar-brand">Notas</a>
+            <?php }else if ($pagina == "doctores"){?>
+                <a class="navbar-brand">Doctores</a>
+            <?php }?>
+
+            
         </div>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
