@@ -10,7 +10,7 @@
                 <div class="card card-solid">
                     <div class="card-body pb-0">
                         <div class="row">
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
                                 <div class="card card-user">
                                     <div class="card-header no-padding">
                                         <div class="card-image">
@@ -49,7 +49,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
                                 <div class="card card-user">
                                     <div class="card-header no-padding">
                                         <div class="card-image">
@@ -88,7 +88,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
                                 <div class="card card-user">
                                     <div class="card-header no-padding">
                                         <div class="card-image">
@@ -127,7 +127,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
                                 <div class="card card-user">
                                     <div class="card-header no-padding">
                                         <div class="card-image">
@@ -166,7 +166,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
                                 <div class="card card-user">
                                     <div class="card-header no-padding">
                                         <div class="card-image">
@@ -205,7 +205,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
                                 <div class="card card-user">
                                     <div class="card-header no-padding">
                                         <div class="card-image">
@@ -244,7 +244,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
                                 <div class="card card-user">
                                     <div class="card-header no-padding">
                                         <div class="card-image">
@@ -283,7 +283,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
                                 <div class="card card-user">
                                     <div class="card-header no-padding">
                                         <div class="card-image">
@@ -322,7 +322,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
                                 <div class="card card-user">
                                     <div class="card-header no-padding">
                                         <div class="card-image">
@@ -361,7 +361,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
                                 <div class="card card-user">
                                     <div class="card-header no-padding">
                                         <div class="card-image">
@@ -400,7 +400,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
                                 <div class="card card-user">
                                     <div class="card-header no-padding">
                                         <div class="card-image">
@@ -439,7 +439,7 @@
                                 </div>
 
                             </div>
-                            <div class="col-6 col-sm-4 col-md-3 col-xl-2">
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2">
                                 <div class="card card-user">
                                     <div class="card-header no-padding">
                                         <div class="card-image">
