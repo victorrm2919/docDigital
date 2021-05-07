@@ -65,7 +65,7 @@ $(function () {
 
        // Check modal
 
-       $('.modal-footer button').click(function (e) {
+       $('.mfooter button').click(function (e) {
         e.preventDefault();
         let origen = $(this).attr('data-origen');
         let ch = document.querySelector(origen).checked

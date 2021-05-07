@@ -41,30 +41,21 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido'];
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="aviPriva" required>
                 <label class="form-check-label" for="aviPriva">
-                  He leido el <a href="" data-bs-toggle="modal" data-bs-target="#privacy">Aviso de Privacidad</a>.
+                  He leido el <a href="" data-remodal-target="privacy">Aviso de Privacidad</a>.
                 </label>
               </div>
             </div>
             <!-- Modal -->
-            <div class="modal fade" id="privacy" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="privacyLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h3 class="modal-title m-auto" id="privacyLabel">Aviso de Privacidad</h3>
-                    </div>
-                    <div class="modal-body">
-                      <p class="text-justify">
-                        <?php require 'assets/docs/PRIVACY_SACTIVA' ?>
-                      </p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
-                        data-origen="#aviPriva">Aceptar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="remodal" data-remodal-id="privacy">
+              <button data-remodal-action="close" class="remodal-close"></button>
+              <h2>Aviso de Privacidad</h2>
+              <p class="hP">
+                <?php require 'assets/docs/PRIVACY_SACTIVA' ?>
+              </p>
+              <div class="mfooter text-end">
+                <button type="button" class="btn btn-primary" data-remodal-action="confirm" class="remodal-confirm" data-origen="#aviPriva">Aceptar</button>
+              </div>  
+            </div>
           </div>
 
 
