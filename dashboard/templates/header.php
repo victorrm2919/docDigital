@@ -1,6 +1,7 @@
 <?php 
 
-require "../platform/functions/functions.php" ;
+require "../functions/functions.php" ;
+require "../functions/sessions.php";
 
 $pagina = obtenerPaginaActual();
 

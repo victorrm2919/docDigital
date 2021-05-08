@@ -1,5 +1,5 @@
 <?php 
-require_once '../functions/db_conexion.php';  /* DataBase */
+require_once '../../functions/db_conexion.php';  /* DataBase */
 // if (!isset($_POST['usuario'])) {
 //     die(header('Location: error.php'));
 // }

@@ -10,6 +10,9 @@
                 <div class="card card-solid">
                     <div class="card-body pb-0">
                         <div class="row">
+                            <?php require "../functions/db_conexion.php"; ?>
+
+
                             <div class="col-12 col-sm-4 col-md-3 col-xl-2">
                                 <div class="card card-user">
                                     <div class="card-header no-padding">

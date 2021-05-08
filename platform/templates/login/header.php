@@ -11,7 +11,7 @@ $tipo = $_GET['user'];
 
 
 if($pagina !== 'login' && $pagina !== 'create-account') {
-  include 'functions/sessions.php';
+  include '../functions/sessions.php';
 }
 ?>
 

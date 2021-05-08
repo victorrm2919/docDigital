@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include 'functions/functions.php';
+include '../functions/functions.php';
 include 'templates/login/header.php'; 
 
 if ($tipo == "paciente") {
