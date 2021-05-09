@@ -178,7 +178,7 @@
                     <?php
                     require_once '../functions/db_conexion.php';  /* archivo requerido, crea conexion */
                     try {
-                      $sql = 'SELECT clave, nombre FROM especialidades';
+                      $sql = 'SELECT clave, nombre FROM especialidades ORDER BY nombre';
                       $info = $conn->query($sql);
                     } catch (\Throwable $th) {
                       $error = $e->getMessage();
@@ -187,7 +187,6 @@
                     ?>
                     <div class="custom-select">
                       <select id="nombreEspecialidad" name="nombreEspecialidad" form="infoUsuario">
-                        <option></option>
                         <?php while ($especialidad = $info->fetch_assoc()) : ?>
                         <option value="<?php echo $especialidad['clave'] ?>"><?php echo $especialidad['nombre'] ?>
                         </option>

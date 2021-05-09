@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-fixed">
+<nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <div class="navbar-wrapper">
             <div class="navbar-minimize">
@@ -84,7 +84,7 @@
                         <a class="dropdown-item" href="#">
                             <i class="nc-icon nc-lock-circle-open"></i> Lock Screen
                         </a>
-                        <a href="#" class="dropdown-item text-danger">
+                        <a href="../platform/logout.php" class="dropdown-item text-danger closeSession">
                             <i class="nc-icon nc-button-power"></i> Log out
                         </a>
                     </div>

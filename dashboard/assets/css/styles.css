@@ -10,9 +10,6 @@ body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, 
     font-family: 'Karla', sans-serif !important;
 }
 
-
-
-
 .material-icons-outlined {
     font-family: 'Material Icons Outlined';
     font-weight: normal;
@@ -83,3 +80,22 @@ body, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, 
 .sidebar {
     z-index: 1040 !important;
 }
+
+
+.fl {
+    border-radius: 20px !important;
+}
+
+.w90 {
+    width: 90% !important;
+    margin: 0 auto;
+}
+
+@media (min-width:1400px) {
+    .colxxl-2 {
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
