@@ -37,7 +37,7 @@ $nombreC= $_SESSION['nombre'] . ' '. $_SESSION['apellido'];
           </form>
 
           <div class="row justify-content-end mt-5">
-            <div class="col-3">
+            <div class="col-4">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="aviPriva" required>
                 <label class="form-check-label" for="aviPriva">

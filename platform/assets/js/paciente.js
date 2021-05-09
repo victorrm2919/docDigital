@@ -241,7 +241,7 @@ $(function () {
                 dataType: "json",
                 success: function (data) {
                     if (data.respuesta === 'correcto') {
-                        window.location.href = '../dashboard';
+                        // window.location.href = '../dashboard';
                     }
                 }
             });
