@@ -2,6 +2,20 @@ $(function () {
   /* Expediente*/
 
 
+  Swal.fire({
+    toast:true,
+    position: 'top',
+    icon: 'info',
+    title: 'Por favor llena este formulario para continuar.',
+    timer: 3000,
+    showConfirmButton: false,
+    padding: '2em',
+    background: '#f5f6fa'
+  })
+
+
+
+
   /* Cerrar Sesion */
 
   $('.closeSession').click(function (e) {
