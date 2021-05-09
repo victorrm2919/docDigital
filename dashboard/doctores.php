@@ -10,7 +10,17 @@
                 <div class="card card-solid">
                     <div class="card-body pb-0">
                         <div class="row">
-                            <?php require "../functions/db_conexion.php"; ?>
+
+                            <?php 
+                            try {
+                            require "../functions/db_conexion.php";  /* archivo requerido, crea conexion */ 
+                            $sql = "SELECT * FROM perfiles ";  /* query */
+                            $resultado = $conn->query($sql);  /* consulta a base de datos */
+                            } catch (Exception $e) {
+                            $error = $e->getMessage();  /* mensaje de error */
+                            }
+
+                            ?>
 
 
                             <div class="col-12 col-sm-4 col-md-3 col-xl-2">

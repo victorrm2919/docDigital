@@ -181,8 +181,6 @@ $(function () {
             $('#guardar-registro').val('guardar');
 
             const datos = new FormData(this);
-
-            // console.log(datos);
             $.ajax({
                 type: $(this).attr('method'),
                 url: $(this).attr('action'),
@@ -193,9 +191,24 @@ $(function () {
                 async: true,
                 cache: false,
                 success: function (data) {
-                    console.log(data);
                     if (data.respuesta === 'correcto') {
-                        window.location.href = '../dashboard';
+
+                        $('#guardar-registro').val('perfil');
+
+                        const perfil = $('#infoUsuario').serializeArray();
+                        $.ajax({
+                            type: $('#infoUsuario').attr('method'),
+                            url: $('#infoUsuario').attr('action'),
+                            data: perfil,
+                            dataType: "json",
+                            success: function (data) {
+                                if (data.respuesta === 'correcto') {
+                                window.location.href = '../dashboard';
+                                }
+                            }
+
+                        });
+
                     }else if (data.respuesta === 'Error') {
                         $('.loading').addClass('d-none');
 
@@ -204,7 +217,6 @@ $(function () {
                             position: 'top-end',
                             showConfirmButton: false,
                             timer: 2000,
-                            timerProgressBar: true,
                           })
                           
                           Toast.fire({

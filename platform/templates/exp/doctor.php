@@ -176,7 +176,7 @@
                 <div class="modal-body">
                   <div class="px-3">
                     <?php
-                    require_once 'functions/db_conexion.php';  /* archivo requerido, crea conexion */
+                    require_once '../functions/db_conexion.php';  /* archivo requerido, crea conexion */
                     try {
                       $sql = 'SELECT clave, nombre FROM especialidades';
                       $info = $conn->query($sql);

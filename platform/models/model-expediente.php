@@ -47,7 +47,6 @@ if ($_POST['registro'] == 'guardar') {
         }else if ($_POST['tipo'] == 'doctor') {
 
             $user = $_POST['user'];
-
             $curp = $_POST['curp'];
             $rfc = $_POST['RFC'];
             $hc = $_POST['homoC'];
@@ -73,15 +72,13 @@ if ($_POST['registro'] == 'guardar') {
 
 
             /* Sube img modificada */
-
             $subir = uploadImgBase64($_POST['firmaDig'], $nombreImg);
 
-        
             $stmt = $conn->prepare("INSERT INTO expedientes_doc(curp,rfc,hc,telPer,direc,cp,col,edo,mun,telCons,uni,titulo,cedProf,esp,cedEsp,costoCons,clabe,url_firma,id_doc) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
             $stmt->bind_param("sssisisssissisisisi", $curp,$rfc,$hc,$telPer,$direc,$cp,$col,$edo,$mun,$telCons,$uni,$titulo,$cedProf,$esp,$cedEsp,$costoCons,$clabe,$nombreImg,$user);
-
             $stmt->execute();
             if($stmt->affected_rows > 0 ){
+
                 $respuesta = array(
                     'respuesta' => 'correcto',
                     'img_resultado' => $subir,
@@ -106,6 +103,39 @@ if ($_POST['registro'] == 'guardar') {
     die(json_encode($respuesta));
 }
 
+if ($_POST['registro'] == 'perfil') {
+    $usuario = $_POST['user'];
+    $claveEsp = $_POST['nombreEspecialidad'];
+
+
+    try {
+    $stmt2 = $conn->prepare("INSERT INTO perfiles (doctor, clave_esp) VALUES (?, ?)");
+    $stmt2->bind_param("is", $usuario,$claveEsp);
+    $stmt2->execute();
+
+    if($stmt2->affected_rows > 0 ){
+        $respuesta = array(
+            'respuesta' => 'correcto',
+            'registro' => 'Perfil'
+        );
+    }else {
+        $respuesta = array(
+            'respuesta' => 'Error',
+            'stmt' => $stmt2->error
+        );
+    }
+    $stmt2->close();
+    $conn->close();
+
+    } catch (Exception $e) {
+        echo "Error.." . $e->getMessage();
+        $respuesta = array(
+            'error' => $e
+        );
+    }
+
+    die(json_encode($respuesta));
+}
 
 
 

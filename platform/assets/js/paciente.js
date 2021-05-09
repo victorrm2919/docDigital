@@ -234,14 +234,12 @@ $(function () {
 
             const datos = $(this).serializeArray();
 
-            // console.log(datos);
             $.ajax({
                 type: $(this).attr('method'),
                 url: $(this).attr('action'),
                 data: datos,
                 dataType: "json",
                 success: function (data) {
-                    console.log(data);
                     if (data.respuesta === 'correcto') {
                         window.location.href = '../dashboard';
                     }
