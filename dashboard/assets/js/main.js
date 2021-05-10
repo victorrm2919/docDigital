@@ -3,9 +3,6 @@ $(function () {
     $('.pacientes .sidebar .sidebar-wrapper .navsid li:nth-child(2)').addClass('active');
     $('.calendario .sidebar .sidebar-wrapper .navsid li:nth-child(3)').addClass('active');
 
-    $('#p1').addClass('active show');
-    $('#p1-tab').addClass('active');
-
 
     /* Cerrar Sesion */
 
