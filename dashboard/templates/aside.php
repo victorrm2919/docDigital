@@ -26,15 +26,9 @@
                 <div class="collapse" id="collapseExample">
                     <ul class="nav mt-3">
                         <li class="nav-item">
-                            <a class="profile-dropdown nav-link" href="#">
+                            <a class="profile-dropdown nav-link" href="./perfil.php">
                                 <span class="sidebar-mini"><i class="material-icons-outlined">person</i></span>
                                 <p class="sidebar-normal">Mi perfil</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="profile-dropdown nav-link" href="#">
-                                <span class="sidebar-mini"><i class="material-icons-outlined">manage_accounts</i></span>
-                                <p class="sidebar-normal">Editar Perfil</p>
                             </a>
                         </li>
                     </ul>
