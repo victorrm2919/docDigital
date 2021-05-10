@@ -24,6 +24,8 @@ if ($val > $paginas) {header("Location:doctores.php?page=$paginas");}
 require 'templates/header.php';
 
 ?>
+
+
 <div class="wrapper doctores">
     <?php require 'templates/aside.php' ?>
     <div class="main-panel">
