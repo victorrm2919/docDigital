@@ -28,7 +28,7 @@ $(function () {
         Swal.showLoading()
       },
       willClose: () => {
-        window.location.href = 'logout.php';
+        window.location.href = 'logout';
       }
     })
   });

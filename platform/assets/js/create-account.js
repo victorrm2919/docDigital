@@ -160,7 +160,7 @@ $(function () {
                 showConfirmButton: false,
                 timer: 3000,
                 onClose: () => {
-                  window.location.href = 'expediente.php'
+                  window.location.href = './expediente'
                   $('.mainCont').addClass('animationfadeOut');
                 }
               })
