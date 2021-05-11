@@ -34,7 +34,7 @@ $prim_apellido = explode(' ',$_SESSION['apellido']);
                 <div class="collapse" id="collapseExample">
                     <ul class="nav mt-3">
                         <li class="nav-item">
-                            <a class="profile-dropdown nav-link" href="./perfil.php">
+                            <a class="profile-dropdown nav-link" href="./perfil">
                                 <span class="sidebar-mini"><i class="material-icons-outlined">person</i></span>
                                 <p class="sidebar-normal">Mi perfil</p>
                             </a>
@@ -45,33 +45,33 @@ $prim_apellido = explode(' ',$_SESSION['apellido']);
         </div>
         <ul class="nav navsid">
             <li class="nav-item">
-                <a class="nav-link" href="./index.php">
+                <a class="nav-link" href="./index">
                     <i class="material-icons-outlined">home</i>
                     <p>Inicio</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./pacientes.php">
+                <a class="nav-link" href="./pacientes">
                     <i class="material-icons-outlined">group</i>
                     <p>Pacientes</p>
                 </a>
             </li>
             <li class="nav-item ">
-                <a class="nav-link" href="./calendar.php">
+                <a class="nav-link" href="./calendar">
                     <i class="material-icons-outlined">today</i>
                     <p>Calendario</p>
                 </a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="./notas.php">
+                <a class="nav-link" href="./notas">
                     <i class="material-icons-outlined">note_alt</i>
                     <p>Notas</p>
                 </a>
             </li>
 
             <li class="nav-item ">
-                <a class="nav-link" href="./doctores.php">
+                <a class="nav-link" href="./doctores">
                     <i class="material-icons-outlined">contacts</i>
                     <p>Listado Doctores</p>
                 </a>

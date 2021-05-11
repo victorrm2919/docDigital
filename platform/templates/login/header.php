@@ -3,7 +3,7 @@ $pagina = obtenerPaginaActual();
 
 
 if (!revisar_pagina_login()) {
-  header("Location:${pagina}.php?user=paciente");
+  header("Location:${pagina}?user=paciente");
   exit();
 }
 

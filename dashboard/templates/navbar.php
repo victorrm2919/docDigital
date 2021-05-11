@@ -84,7 +84,7 @@
                         <a class="dropdown-item" href="#">
                             <i class="nc-icon nc-lock-circle-open"></i> Lock Screen
                         </a>
-                        <a href="../platform/logout.php" class="dropdown-item text-danger closeSession">
+                        <a href="../platform/logout" class="dropdown-item text-danger closeSession">
                             <i class="nc-icon nc-button-power"></i> Log out
                         </a>
                     </div>

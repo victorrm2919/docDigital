@@ -5,7 +5,7 @@ include 'templates/login/header.php';
 ?>
 
 <div class="col-sm-7 form-section animate animationfadeIn">
-  <p class="login-wrapper-signup-text">¿Ya tienes una cuenta? <a href="login.php?user=<?php echo $tipo ?>">Inicia Sesión</a></p>
+  <p class="login-wrapper-signup-text">¿Ya tienes una cuenta? <a href="login?user=<?php echo $tipo ?>">Inicia Sesión</a></p>
   <div class="login-wrapper">
     
     <div class="existeCorreo d-none">

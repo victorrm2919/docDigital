@@ -18,8 +18,8 @@ $paginas = ceil($num_result/$doc_x_pag);
 
 $val = filter_var($_GET['page'],FILTER_SANITIZE_NUMBER_INT);  /* Valida get */
 
-if (!$val > 0 || !$_GET) {header('Location:doctores.php?page=1');}
-if ($val > $paginas) {header("Location:doctores.php?page=$paginas");}
+if (!$val > 0 || !$_GET) {header('Location:doctores?page=1');}
+if ($val > $paginas) {header("Location:doctores?page=$paginas");}
 
 require 'templates/header.php';
 
@@ -120,19 +120,19 @@ require 'templates/header.php';
                         <nav aria-label="Contacts Page Navigation">
                             <ul class="pagination justify-content-center m-0">   
                                 <li class="page-item <?php echo $_GET['page'] <= 1 ? 'disabled' : '' ?>">
-                                    <a class="page-link fl" href="doctores.php?page=<?php echo $_GET['page']-1?>">
+                                    <a class="page-link fl" href="doctores?page=<?php echo $_GET['page']-1?>">
                                         &larr; Anterior
                                     </a>
                                 </li>
                                 <?php for ($i=0; $i < $paginas ; $i++): ?>
                                 <li class="page-item <?php echo $_GET['page']==$i+1 ? 'active' : '' ?>" >
-                                    <a class="page-link" href="doctores.php?page=<?php echo $i+1?>"> 
+                                    <a class="page-link" href="doctores?page=<?php echo $i+1?>"> 
                                         <?php echo $i+1?>   
                                     </a>
                                 </li>
                                 <?php endfor; ?>
                                 <li class="page-item <?php echo $_GET['page'] >= $paginas ? 'disabled' : '' ?>">
-                                    <a class="page-link fl" href="doctores.php?page=<?php echo $_GET['page']+1?>">
+                                    <a class="page-link fl" href="doctores?page=<?php echo $_GET['page']+1?>">
                                         Siguiente &rarr;
                                     </a>
                                 </li>

@@ -16,7 +16,7 @@ $(function () {
 //         Swal.showLoading()
 //       },
 //       willClose: () => {
-//         window.location.href = './platform/logout.php';
+//         window.location.href = './platform/logout';
 //       }
 //     })
 //   });

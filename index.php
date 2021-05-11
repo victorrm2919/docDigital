@@ -39,7 +39,7 @@
           <div class="container-fluid">
             <a class="navbar-brand font-weight-bolder homeB preDef" href="#home" rel="tooltip" title="Sactiva"
               data-placement="bottom">
-              <img class="navimg" href="index.php" src="platform/assets/img/Logo-SAC.png" />
+              <img class="navimg" href="index" src="platform/assets/img/Logo-SAC.png" />
             </a>
 
 
@@ -90,7 +90,7 @@
                     Iniciar Sesión
                   </a>
                   <ul class="dropdown-menu px-2 py-3 hidden" aria-labelledby="iniciarS">
-                    <li><a class="dropdown-item border-radius-md" href="platform/login.php?user=doctor">
+                    <li><a class="dropdown-item border-radius-md" href="platform/login?user=doctor">
                         <div class="d-flex">
                           <div class="icon h-10 me-3 mt-1"><i class="fas fa-user-md"></i></div>
                           <h6
@@ -98,7 +98,7 @@
                             Doctor</h6>
                         </div>
                       </a></li>
-                    <li><a class="dropdown-item border-radius-md" href="platform/login.php?user=paciente">
+                    <li><a class="dropdown-item border-radius-md" href="platform/login?user=paciente">
                         <div class="d-flex">
                           <div class="icon h-10 me-3 mt-1"><i class="fas fa-user"></i></div>
                           <h6
@@ -131,7 +131,7 @@
               permitirá</br>
               obtener una orientación médica de
               forma privada y segura. Así evitarás desplazamientos y esperas.</p>
-            <a href="platform/create-account.php?user=paciente" class="btn bg-white text-dark">Crear Cuenta</a>
+            <a href="platform/create-account?user=paciente" class="btn bg-white text-dark">Crear Cuenta</a>
           </div>
         </div>
       </div>
@@ -207,7 +207,7 @@
 
           <div class="col-12 col-lg-6 d-lg-flex pb-1 mb-4">
             <!-- Card -->
-            <a href="platform/create-account.php?user=doctor" class="hvr-pulse-shrink">
+            <a href="platform/create-account?user=doctor" class="hvr-pulse-shrink">
               <div class="card h-100">
                 <div class="row align-items-center">
                   <div class="col-md-4">
@@ -240,7 +240,7 @@
 
           <div class="col-12 col-lg-6 d-lg-flex pb-1 mb-4">
             <!-- Card -->
-            <a href="platform/create-account.php?user=paciente" class="hvr-pulse-shrink">
+            <a href="platform/create-account?user=paciente" class="hvr-pulse-shrink">
               <div class="card h-100">
                 <div class="row align-items-center">
                   <div class="col-md-8">

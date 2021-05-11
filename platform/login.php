@@ -23,7 +23,7 @@ if ($tipo == "paciente") {
       endif
       
       ?>
-      <a href="create-account.php?user=<?php echo $tipo ?>" class="alert-link">Ingresa aquí</a></p>
+      <a href="create-account?user=<?php echo $tipo ?>" class="alert-link">Ingresa aquí</a></p>
 
     <div class="login-wrapper h-75">
       <div class="iconB mb-1">
@@ -37,8 +37,8 @@ if ($tipo == "paciente") {
       </div>
 
       <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <a href="login.php?user=paciente" class="nav-link nav-paciente">Soy Paciente</a>
-        <a href="login.php?user=doctor" class="nav-link nav-doctor">Soy Doctor</a>
+        <a href="login?user=paciente" class="nav-link nav-paciente">Soy Paciente</a>
+        <a href="login?user=doctor" class="nav-link nav-doctor">Soy Doctor</a>
       </div>  
 
       <div class="tab-content mt-4">

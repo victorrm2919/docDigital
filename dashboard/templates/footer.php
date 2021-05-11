@@ -24,7 +24,7 @@
                             </li>
                         </ul>
                         <p class="copyright text-center">
-                            &copy;Copyright 2021 <a href="https://sactiva.com/#gsc.tab=0">Sactiva</a>-<a href="../index.php">DocDigital</a> 
+                            &copy;Copyright 2021 <a href="https://sactiva.com/#gsc.tab=0">Sactiva</a>-<a href="../">DocDigital</a> 
                         </p>
                     </nav>
                 </div>
