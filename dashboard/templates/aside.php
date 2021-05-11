@@ -1,3 +1,11 @@
+<?php 
+
+$prim_nombre = explode(' ',$_SESSION['nombre']);
+$prim_apellido = explode(' ',$_SESSION['apellido']);
+            
+?>
+
+
 <div class="sidebar" data-color="bluDoc" data-image="assets/img/curved-11.jpg">
     <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
@@ -15,11 +23,11 @@
         </div>
         <div class="user">
             <div class="photo">
-                <img src="assets/img/default-avatar.png" />
+                <img src="assets/img/fotos/default-avatar.png" />
             </div>
             <div class="info ">
                 <a data-toggle="collapse" href="#collapseExample" class="collapsed">
-                    <span>Victor Ruiz
+                    <span><?php echo $prim_nombre[0] . ' ' . $prim_apellido[0] ?>
                         <b class="caret"></b>
                     </span>
                 </a>
