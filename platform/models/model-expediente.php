@@ -114,6 +114,9 @@ if ($_POST['registro'] == 'perfil') {
     $stmt2->execute();
 
     if($stmt2->affected_rows > 0 ){
+        session_start();
+        $_SESSION['foto'] = 'default-avatar.png';
+
         $respuesta = array(
             'respuesta' => 'correcto',
             'registro' => 'Perfil'

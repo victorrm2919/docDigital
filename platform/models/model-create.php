@@ -27,11 +27,23 @@ if ($_POST['registro'] == 'nuevo') {
         $stmt->bind_param("ssss", $nombre, $apellido, $email, $password);
         $stmt->execute();
         if($stmt->affected_rows > 0 ){
+            $id_insert = $stmt->insert_id;
+
+            try {
+                $sql = "SELECT foto FROM perfiles where";  /* query */
+                $datos = $conn->query($sql);  /* consulta a base de datos */
+            } catch (Exception $e) {
+                $error = $e->getMessage();  /* mensaje de error */
+                echo $error;
+            }
+
+
+
             session_start();
             $_SESSION['email'] = $email;
             $_SESSION['nombre'] = $nombre;
             $_SESSION['apellido'] = $apellido;
-            $_SESSION['id'] = $stmt->insert_id;
+            $_SESSION['id'] = $id_insert;
             $_SESSION['tipo'] = $tipo;
             $_SESSION['login'] = true;
 

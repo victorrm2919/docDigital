@@ -23,7 +23,7 @@ $prim_apellido = explode(' ',$_SESSION['apellido']);
         </div>
         <div class="user">
             <div class="photo">
-                <img src="assets/img/fotos/<?php echo $_SESSION['foto'] ?>" />
+                <img src="assets/img/fotos/<?php echo !$_SESSION['foto'] ? 'default-avatar.png' : $_SESSION['foto'] ?>" />
             </div>
             <div class="info ">
                 <a data-toggle="collapse" href="#collapseExample" class="collapsed">
