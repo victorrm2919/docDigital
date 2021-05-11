@@ -11,13 +11,19 @@ if (isset($_POST['tipo'])) {
     try {
          //Seleccionar el usurio en el base de datos
          if ($_POST['tipo'] == 'doctor') {
-            $stmt = $conn->prepare("SELECT id, nombres, apellidos, email, password FROM doctor WHERE email = ?");
+            $stmt = $conn->prepare("SELECT id, nombres, apellidos, email, password, foto FROM doctor INNER JOIN perfiles ON doctor.id = perfiles.doctor WHERE email = ?");
          }elseif ($_POST['tipo'] == 'paciente') {
             $stmt = $conn->prepare("SELECT id, nombres, apellidos, email, password FROM paciente WHERE email = ?");
          }
          $stmt->bind_param("s", $usuario);
          $stmt->execute();
-         $stmt->bind_result($id_usuarioDB, $nombreBD, $apellidoBD, $emailBD, $pass_usuarioDB); //resultados de la consulta y asigna a variables declaradas
+
+         if ($_POST['tipo'] == 'doctor') {
+            $stmt->bind_result($id_usuarioDB, $nombreBD, $apellidoBD, $emailBD, $pass_usuarioDB, $fotoDB); 
+         }elseif ($_POST['tipo'] == 'paciente') {
+             $stmt->bind_result($id_usuarioDB, $nombreBD, $apellidoBD, $emailBD, $pass_usuarioDB); //resultados de la consulta y asigna a variables declaradas
+         }
+
          $stmt->fetch();
          if ($emailBD) {
              //el usuario existe y verificara el password
@@ -30,6 +36,7 @@ if (isset($_POST['tipo'])) {
                  $_SESSION['id'] = $id_usuarioDB;
                  $_SESSION['login'] = true;
                  $_SESSION['tipo'] = $_POST['tipo'];
+                 $_SESSION['foto'] = $fotoDB;
                  //login correcto
                  $respuesta = array(
                      'respuesta' => 'correcto',
