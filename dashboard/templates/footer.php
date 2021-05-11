@@ -24,11 +24,7 @@
                             </li>
                         </ul>
                         <p class="copyright text-center">
-                            ©
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script>
-                            <a href="https://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+                            &copy;Copyright 2021 <a href="https://sactiva.com/#gsc.tab=0">Sactiva</a>-<a href="../index.php">DocDigital</a> 
                         </p>
                     </nav>
                 </div>

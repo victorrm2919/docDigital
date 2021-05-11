@@ -81,7 +81,7 @@ require 'templates/header.php';
                                         <div class="card-body ">
                                             <div class="author">
                                                 <a href="#">
-                                                    <img class="avatar border-gray" src="assets/img/<?php echo $doc['foto'] ?>" alt="...">
+                                                    <img class="avatar border-gray" src="assets/img/fotos/<?php echo $doc['foto'] ?>" alt="...">
                                                     <h5 class="card-title"><?php echo $doc['nombres'] . ' ' . $doc['apellidos']?></h5>
                                                 </a>
                                                 <p class="card-description"> 
@@ -147,7 +147,7 @@ require 'templates/header.php';
 
         </div>
 
-
-
-
-<?php require 'templates/footer.php' ?>
+<?php 
+$conn->close();
+require 'templates/footer.php' 
+?>
